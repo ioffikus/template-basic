@@ -1,0 +1,45 @@
+{
+  "extends": ["tslint-config-airbnb", "tslint-react"],
+  "rules": {
+    "space-before-function-paren": [false],
+    "align": [false],
+    "max-line-length": [false],
+    "quotemark": [true, "single", "jsx-double"],
+    "semicolon": [true, "always", "ignore-bound-class-methods"],
+    "jsx-no-lambda": false,
+    "ordered-imports": false,
+    "comma-dangle": [0, "never"],
+    "no-confusing-arrow": [
+      "error",
+      {
+        "allowParens": true
+      }
+    ],
+    "trailing-comma": [
+      true,
+      {
+        "multiline": {
+          "objects": "always",
+          "arrays": "always",
+          "functions": "always",
+          "typeLiterals": "ignore"
+        }
+      }
+    ],
+    "arrow-parens": false,
+    "object-literal-sort-keys": false,
+    "import-name": false,
+    "no-var-requires": false,
+    "jsx-boolean-value": false,
+    "member-access": false,
+    "jsx-no-multiline-js": false,
+    "jsx-wrap-multiline": false,
+    "variable-name": false,
+    "array-bracket-spacing": [false],
+    "ter-arrow-parens": false,
+    "jsx-alignment": false,
+    "no-unused-variable": true,
+    "object-literal-key-quotes": [true, "as-needed"],
+    "jsx-curly-spacing": false
+  }
+}

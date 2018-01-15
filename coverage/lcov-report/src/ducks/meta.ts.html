@@ -1,0 +1,341 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for src/ducks/meta.ts</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../prettify.css" />
+    <link rel="stylesheet" href="../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../index.html">All files</a> / <a href="index.html">src/ducks</a> meta.ts
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">45% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>18/40</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/16</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">71.43% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>5/7</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">43.24% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>16/37</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { createAction, createReducer } from 'redux-act';
+import { matchPath } from 'react-router';
+import _ from 'lodash';
+&nbsp;
+export const REDUCER = 'META';
+const NS = `${REDUCER}__`;
+&nbsp;
+export interface IMetaState extends Alicanto.Models.Meta {}
+&nbsp;
+export const initialState: IMetaState = {
+  title: 'title',
+  description: 'description',
+  keywords: 'keywo<span class="fstat-no" title="function not covered" >rd</span>s',<span class="cstat-no" title="statement not covered" ></span>
+};
+&nbsp;
+const reducer = createReducer&lt;IMetaState&gt;({}, initialState);
+&nbsp;
+const reset = createAction(`${NS}RESET`);
+reducer.on(reset, state =&gt; ({
+  ...initialState,<span class="fstat-no" title="function not covered" ></span>
+}));<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" ></span>
+export const setMeta = cre<span class="cstat-no" title="statement not covered" >ateAction&lt;Alicanto.Models.Meta&gt;(`${NS}SET_META`)</span>;
+reducer.on(s<span class="cstat-no" title="statement not covered" >etMeta, (state, { title, description, keywords }) =&gt; ({</span>
+  ...state,<span class="cstat-no" title="statement not covered" ></span>
+  title,<span class="cstat-no" title="statement not covered" ></span>
+  description,
+  keywords,
+}));<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" ></span>
+const getMet<span class="cstat-no" title="statement not covered" >aByPath = (pathname: string, routes: Alicanto.Models.Routes) =&gt; {</span>
+  let result: Al<span class="cstat-no" title="statement not covered" >icanto.Models.Meta </span>= null;
+  Object.keys(ro<span class="cstat-no" title="statement not covered" >utes).find(ke</span>y =&gt; {
+    const route = routes[key];
+    if (route.meta) {
+      const match = matchPath(pathname, { path: key, exact: true });
+<span class="cstat-no" title="statement not covered" >      if (!_.isNull</span>(match)) {
+        result = route.meta;
+        return true;
+      }
+    }
+    if (route.routes) {
+      const children = getMetaByPath(pathname, route.routes);
+      if<span class="cstat-no" title="statement not covered" > (children) {</span>
+        result = children;
+        return true;
+      }
+    }
+  });
+  return result;
+};
+&nbsp;
+export const getMeta = (abortToken: string): Store.IReduxThunkCb =&gt; (dispatch, getState, xShopHeaders) =&gt; {
+  return new Promise((resolve, reject) =&gt; {
+    const router = getState().router;
+    const routes = getState().routes;
+    const meta = getMetaByPath(router.location.pathname, routes);
+    if (meta &amp;&amp; meta.isLoadable) {
+      // WIP for use EndpointsConfig.SEO
+      // dispatch(callRequest());
+      // GET(
+      //   {
+      //     url: `${EndpointsConfig.SEO}?path=${router.location.pathname}`,
+      //   },
+      //   x<span class="cstat-no" title="statement not covered" >ShopHeaders</span>,
+      //   a<span class="cstat-no" title="statement not covered" >bortToke</span>n,
+      // )
+      //<span class="cstat-no" title="statement not covered" >   .then((resp: AxiosResponse) =&gt; {</span>
+      //    <span class="cstat-no" title="statement not covered" > const data = resp.data a</span>s Alicanto.API.GET_SEO_DATA_RESPONSE;
+      //    <span class="cstat-no" title="statement not covered" > dispatch(s</span>etMeta(data));
+      //    <span class="cstat-no" title="statement not covered" > dispatc</span>h(callSuccess());
+      //     resolve();
+      //<span class="cstat-no" title="statement not covered" >   })</span>
+      //<span class="cstat-no" title="statement not covered" >   .catch(e</span>rror =&gt; {
+      //     console.log('error:', error);
+      //     dispatch(callFailure());
+      //     reject(error);
+      //   });
+      resolve();
+      return;
+    }
+    if (meta &amp;&amp; !meta.isLoadable) {
+      dispatch(setMeta(meta as Alicanto.Models.Meta));
+      resolve();
+      return;
+    }
+    dispatch(reset());
+    resolve();
+  });
+};
+&nbsp;
+export default reducer;
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Fri Dec 29 2017 11:52:09 GMT+0300 (MSK)
+</div>
+</div>
+<script src="../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../sorter.js"></script>
+</body>
+</html>

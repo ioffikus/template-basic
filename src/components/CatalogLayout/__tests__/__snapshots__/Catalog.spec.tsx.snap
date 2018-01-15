@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`render() 1`] = `
+<div
+  className="jsx-2818191692 root app-container"
+>
+  <JSXStyle
+    css=".root.jsx-2818191692 .header{margin-bottom:30px;}"
+    styleId="2818191692"
+  />
+  <Row
+    className="header"
+    gutter={0}
+    justify="space-between"
+    type="flex"
+  >
+    <Col
+      span={23}
+    >
+      <Connect(Breadcrumbs)
+        for="catalog"
+      />
+    </Col>
+    <Col
+      span={1}
+    >
+      <Connect(SearchForm) />
+    </Col>
+  </Row>
+  <Connect(ProductItems) />
+</div>
+`;

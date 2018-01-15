@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`render() correct 1`] = `
+<div
+  class="jsx-1044737517 root"
+>
+  Status: dymmy status
+  <span
+    class="jsx-1044737517 icon"
+  >
+    i
+  </span>
+</div>
+`;
+
+exports[`render() without status 1`] = `
+<div
+  class="jsx-1044737517 root"
+>
+  Status: dymmy status
+</div>
+`;

@@ -1,0 +1,401 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for src/components/ProductItems/ProductItems.tsx</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../prettify.css" />
+    <link rel="stylesheet" href="../../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../../index.html">All files</a> / <a href="index.html">src/components/ProductItems</a> ProductItems.tsx
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>0/18</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/4</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>0/9</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>0/17</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import React from 'react';
+import { RouterState, push } from 'connected-react-router';
+import { Row, Col, Button, Spin, Modal } from 'antd';
+import _ from 'lodash';
+import queryString from 'query-string';
+import dispatch from 'src/store/dispatch';
+import { addToCart } from 'src/ducks/cart';
+import Item from './Item';
+import CartItems from 'src/components/CartItems';
+&nbsp;
+inte<span class="fstat-no" title="function not covered" >rf</span>ace IProps {
+  router<span class="cstat-no" title="statement not covered" >: RouterState;</span>
+  ui: Al<span class="cstat-no" title="statement not covered" >icanto.Models.UI;</span>
+  isRequesting: boolean;
+  items: Alicanto.Models.CatalogItem[];
+  hasNex<span class="cstat-no" title="statement not covered" >tPage: boolean;<span class="fstat-no" title="function not covered" ></span></span>
+}<span class="cstat-no" title="statement not covered" ></span>
+&nbsp;
+interfac<span class="cstat-no" title="statement not covered" >e IState {<span class="fstat-no" title="function not covered" ></span></span>
+  isVisibleC<span class="cstat-no" title="statement not covered" >artModal: boolean;</span>
+}
+&nbsp;
+class ProductItems extends React.Component&lt;IProps, IState&gt; {
+  state:<span class="cstat-no" title="statement not covered" > IState = {<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" ><span class="fstat-no" title="function not covered" ></span></span></span></span>
+    isVisibl<span class="cstat-no" title="statement not covered" >eCartModal: false,<span class="fstat-no" title="function not covered" ></span></span>
+  };<span class="cstat-no" title="statement not covered" ></span>
+&nbsp;
+  handleGoToCart = () =&gt; {
+    dispatch(push('/cart'));
+  };
+<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" ></span></span>
+  handleCartModalCancel = <span class="cstat-no" title="statement not covered" >() =&gt; {</span>
+    this.set<span class="cstat-no" title="statement not covered" >State({</span>
+      isVisibleCartModal: fal<span class="cstat-no" title="statement not covered" >se,</span>
+    });<span class="cstat-no" title="statement not covered" ></span>
+  };
+&nbsp;
+  ha<span class="fstat-no" title="function not covered" >nd</span>leAddToCart = (item: Alicanto.Models.CatalogItem) =&gt; () =&gt; {
+    dispatch(<span class="cstat-no" title="statement not covered" ></span>
+      ad<span class="cstat-no" title="statement not covered" >dToCart(item, () =&gt; {</span>
+        this.setState({
+          isVisibleCartModal: true,
+        });
+      }),
+    );
+  };
+&nbsp;
+  handleShowMore = () =&gt; {
+    const query = queryString.parse(this.props.router.location.search);
+    query.page = parseInt(_.get(query, 'page', '1'), 10) + 1;
+    const location = { ...this.p<span class="fstat-no" title="function not covered" >ro</span>ps.router<span class="cstat-no" title="statement not covered" >.location, search: queryString.stringify(query) };</span>
+    dispatch(push(location));
+  };
+&nbsp;
+  render() {
+    const commonUI = this.props.ui.common;
+    return (
+      &lt;div className="root"&gt;
+        &lt;style jsx&gt;{`
+          .root {
+            padding-bottom: 16px;
+          }
+          .root :global(.footer) {
+            padding: 0 8px;
+            text-align: center;
+          }
+        `}&lt;/style&gt;
+        &lt;Row type="flex" justify="start"&gt;
+          {this.props.items.map((item: Alicanto.Models.CatalogItem) =&gt; (
+            &lt;Col key={item.uid} xs={24} sm={12} md={8} lg={6} xl={6}&gt;
+              &lt;Item ui={this.props.ui} item={item} handleAddToCart={this.handleAddToCart(item)} /&gt;
+            &lt;/Col&gt;
+          ))}
+        &lt;/Row&gt;
+        &lt;Row type="flex" justify="center" align="middle" className="footer"&gt;
+          &lt;Col span={24}&gt;
+            {this.props.isRequesting ? (
+              &lt;Spin /&gt;
+            ) : (
+              this.props.hasNextPage &amp;&amp; (
+                &lt;Button onClick={this.handleShowMore} size="large" className="app-show-more-button"&gt;
+                  {commonUI.buttons.showMore.i18n.defaultText}
+                &lt;/Button&gt;
+              )
+            )}
+          &lt;/Col&gt;
+        &lt;/Row&gt;
+        &lt;Modal visible={this.state.isVisibleCartModal} onCancel={this.handleCartModalCancel} footer={false} width={540}&gt;
+          &lt;CartItems
+            mayChangeAmountItems={true}
+            footer={[
+              &lt;Button
+                key="continueShopping"
+                className="button"
+                type="primary"
+                size="large"
+                onClick={this.handleCartModalCancel}
+              &gt;
+                {commonUI.buttons.continueShopping.i18n.defaultText}
+              &lt;/Button&gt;,
+              &lt;Button key="goToCart" className="button" type="primary" size="large" onClick={this.handleGoToCart}&gt;
+                {commonUI.buttons.goToCart.i18n.defaultText}
+              &lt;/Button&gt;,
+            ]}
+          /&gt;
+        &lt;/Modal&gt;
+      &lt;/div&gt;
+    );
+  }
+}
+&nbsp;
+export default ProductItems;
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Fri Dec 29 2017 11:52:09 GMT+0300 (MSK)
+</div>
+</div>
+<script src="../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../sorter.js"></script>
+</body>
+</html>

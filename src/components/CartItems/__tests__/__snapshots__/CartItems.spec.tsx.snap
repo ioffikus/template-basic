@@ -1,0 +1,125 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`render() with items 1`] = `
+<div
+  className="jsx-615831497 root"
+>
+  <JSXStyle
+    css=".root.jsx-615831497{width:540px;max-width:100%;font-size:14px;font-weight:bold;padding:15px 0;}.large.jsx-615831497{width:100%;padding-bottom:0;}.root.jsx-615831497 .list{margin-bottom:16px;}.root.jsx-615831497 .name-col{width:100%;max-width:0;}.root.jsx-615831497 .image-col{padding-left:0;}.root.jsx-615831497 .delete-col{padding-right:0;}.root.jsx-615831497 .cost-col{text-align:right;white-space:nowrap;}.large.jsx-615831497 .cost-col{padding-left:30px;}.root.jsx-615831497 .ant-row-flex:not(:last-of-type){margin-bottom:9px;padding-bottom:8px;}.root.jsx-615831497 .button-wrapper{text-align:right;}.root.jsx-615831497 .button{min-width:192px;-webkit-letter-spacing:2px;-moz-letter-spacing:2px;-ms-letter-spacing:2px;letter-spacing:2px;text-transform:uppercase;font-weight:500;font-size:11px;line-height:32px;text-decoration:none;}.root.jsx-615831497 .button + .button{margin-left:12px;}.has-border-bottom.jsx-615831497{border-bottom:2px solid #e5ecf4;}.has-border-bottom.jsx-615831497 .ant-table-tbody > tr:not(:last-of-type) > td{border-bottom:1px solid #e5ecf4;}.root.jsx-615831497 .ant-table-tbody > tr > td{padding-top:9px;padding-bottom:9px;border:0;}.root.jsx-615831497 .ant-table-tbody > tr:hover > td{background:transparent;}"
+    styleId="615831497"
+  />
+  <div
+    className="jsx-615831497 inner"
+  >
+    <div
+      className="jsx-615831497 list"
+    >
+      <Table
+        bordered={false}
+        className=""
+        columns={
+          Array [
+            Object {
+              "className": "image-col",
+              "key": "image",
+              "render": [Function],
+            },
+            Object {
+              "className": "name-col",
+              "key": "name",
+              "render": [Function],
+            },
+            Object {
+              "className": "count-col",
+              "key": "count",
+              "render": [Function],
+            },
+            Object {
+              "className": "cost-col",
+              "key": "cost",
+              "render": [Function],
+            },
+            Object {
+              "className": "delete-col",
+              "key": "delete",
+              "render": [Function],
+            },
+          ]
+        }
+        dataSource={
+          Array [
+            Object {
+              "cost": Object {
+                "currency": "€",
+                "price": 0,
+              },
+              "count": 1,
+              "key": "92c0d3cfa48940568421",
+              "nameFields": Object {
+                "name": "Starship Troopers. ePub. Free!",
+                "shortDescription": "ePub version of Star",
+              },
+              "pictureUrl": "",
+              "uid": "92c0d3cfa48940568421",
+            },
+            Object {
+              "cost": Object {
+                "currency": "€",
+                "price": 14,
+              },
+              "count": 1,
+              "key": "ba1d54813e9b410aa1ea",
+              "nameFields": Object {
+                "name": "Starship Troopers. ePub ru",
+                "shortDescription": "ePub version of Star",
+              },
+              "pictureUrl": "",
+              "uid": "ba1d54813e9b410aa1ea",
+            },
+            Object {
+              "cost": Object {
+                "currency": "€",
+                "price": 11,
+              },
+              "count": 1,
+              "key": "d6186dc8f72f4c9b932f",
+              "nameFields": Object {
+                "name": "Starship Troopers. PDF ru",
+                "shortDescription": "PDF version of Stars",
+              },
+              "pictureUrl": "",
+              "uid": "d6186dc8f72f4c9b932f",
+            },
+          ]
+        }
+        indentSize={20}
+        loading={false}
+        locale={Object {}}
+        pagination={false}
+        prefixCls="ant-table"
+        rowKey="key"
+        rowSelection={null}
+        showHeader={false}
+        size="large"
+        useFixedHeader={false}
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`render() without items 1`] = `
+<div
+  className="jsx-615831497 root"
+>
+  <JSXStyle
+    css=".root.jsx-615831497{width:540px;max-width:100%;font-size:14px;font-weight:bold;padding:15px 0;}.large.jsx-615831497{width:100%;padding-bottom:0;}.root.jsx-615831497 .list{margin-bottom:16px;}.root.jsx-615831497 .name-col{width:100%;max-width:0;}.root.jsx-615831497 .image-col{padding-left:0;}.root.jsx-615831497 .delete-col{padding-right:0;}.root.jsx-615831497 .cost-col{text-align:right;white-space:nowrap;}.large.jsx-615831497 .cost-col{padding-left:30px;}.root.jsx-615831497 .ant-row-flex:not(:last-of-type){margin-bottom:9px;padding-bottom:8px;}.root.jsx-615831497 .button-wrapper{text-align:right;}.root.jsx-615831497 .button{min-width:192px;-webkit-letter-spacing:2px;-moz-letter-spacing:2px;-ms-letter-spacing:2px;letter-spacing:2px;text-transform:uppercase;font-weight:500;font-size:11px;line-height:32px;text-decoration:none;}.root.jsx-615831497 .button + .button{margin-left:12px;}.has-border-bottom.jsx-615831497{border-bottom:2px solid #e5ecf4;}.has-border-bottom.jsx-615831497 .ant-table-tbody > tr:not(:last-of-type) > td{border-bottom:1px solid #e5ecf4;}.root.jsx-615831497 .ant-table-tbody > tr > td{padding-top:9px;padding-bottom:9px;border:0;}.root.jsx-615831497 .ant-table-tbody > tr:hover > td{background:transparent;}"
+    styleId="615831497"
+  />
+  <div
+    className="jsx-615831497 app-text-empty"
+  >
+    Please add a product to card
+  </div>
+</div>
+`;

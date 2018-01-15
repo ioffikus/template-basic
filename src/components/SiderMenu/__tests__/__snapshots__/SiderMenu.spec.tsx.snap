@@ -1,0 +1,91 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`render() correct with type as "categories" 1`] = `
+<div
+  className="jsx-3563057876 root collapsed categories"
+>
+  <JSXStyle
+    css=".root.jsx-3563057876{position:relative;z-index:10;min-width:98px;background-color:#fff;}.root.jsx-3563057876 .ant-layout-sider-children{box-shadow:none;}.root.jsx-3563057876 .ant-layout-sider{max-height:100%;overflow-x:auto;}.inner-wrapper.jsx-3563057876{position:absolute;top:-1px;min-height:100vh;height:100%;padding-top:15px;padding-bottom:40px;background-color:#fff;border:1px solid transparent;box-shadow:0 2px 16px 0 rgba(36,103,164,0.18);-webkit-transition:box-shadow 0.2s;transition:box-shadow 0.2s;}.categories.jsx-3563057876 .inner-wrapper{left:0;}.filters.jsx-3563057876 .inner-wrapper{right:0;}.collapsed.jsx-3563057876 .inner-wrapper{box-shadow:none;border-color:#e5ecf4;}.fixed.jsx-3563057876 .inner-wrapper{position:fixed;}.button-wrapper.jsx-3563057876{padding-top:35px;text-align:center;position:relative;z-index:10;opacity:0;}.categories.jsx-3563057876 .button-wrapper{left:0;}.filters.jsx-3563057876 .button-wrapper{right:0;}.collapsed.jsx-3563057876 .button-wrapper{-webkit-transition:opacity 2s;transition:opacity 2s;opacity:1;}.fixed.jsx-3563057876 .button-wrapper{position:fixed;top:0;width:98px;}.collapsed.jsx-3563057876 .app-main-menu .footer{width:0;}.collapsed.jsx-3563057876 .app-main-menu{max-width:0;}"
+    styleId="3563057876"
+  />
+  <EventHandler
+    onCollapsed={[Function]}
+  >
+    <div
+      className="jsx-3563057876 button-wrapper"
+    >
+      <Button
+        ghost={false}
+        loading={false}
+        prefixCls="ant-btn"
+        shape="circle"
+      >
+        <Svg
+          className="app-icon-svg"
+          name="menu"
+        />
+      </Button>
+    </div>
+    <div
+      className="jsx-3563057876 inner-wrapper"
+    >
+      <Sider
+        collapsed={true}
+        collapsedWidth="98"
+        collapsible={true}
+        defaultCollapsed={false}
+        prefixCls="ant-layout-sider"
+        reverseArrow={false}
+        style={Object {}}
+        trigger={null}
+        width="260"
+      />
+    </div>
+  </EventHandler>
+</div>
+`;
+
+exports[`render() correct with type as "filters" 1`] = `
+<div
+  className="jsx-3563057876 root collapsed filters"
+>
+  <JSXStyle
+    css=".root.jsx-3563057876{position:relative;z-index:10;min-width:98px;background-color:#fff;}.root.jsx-3563057876 .ant-layout-sider-children{box-shadow:none;}.root.jsx-3563057876 .ant-layout-sider{max-height:100%;overflow-x:auto;}.inner-wrapper.jsx-3563057876{position:absolute;top:-1px;min-height:100vh;height:100%;padding-top:15px;padding-bottom:40px;background-color:#fff;border:1px solid transparent;box-shadow:0 2px 16px 0 rgba(36,103,164,0.18);-webkit-transition:box-shadow 0.2s;transition:box-shadow 0.2s;}.categories.jsx-3563057876 .inner-wrapper{left:0;}.filters.jsx-3563057876 .inner-wrapper{right:0;}.collapsed.jsx-3563057876 .inner-wrapper{box-shadow:none;border-color:#e5ecf4;}.fixed.jsx-3563057876 .inner-wrapper{position:fixed;}.button-wrapper.jsx-3563057876{padding-top:35px;text-align:center;position:relative;z-index:10;opacity:0;}.categories.jsx-3563057876 .button-wrapper{left:0;}.filters.jsx-3563057876 .button-wrapper{right:0;}.collapsed.jsx-3563057876 .button-wrapper{-webkit-transition:opacity 2s;transition:opacity 2s;opacity:1;}.fixed.jsx-3563057876 .button-wrapper{position:fixed;top:0;width:98px;}.collapsed.jsx-3563057876 .app-main-menu .footer{width:0;}.collapsed.jsx-3563057876 .app-main-menu{max-width:0;}"
+    styleId="3563057876"
+  />
+  <EventHandler
+    onCollapsed={[Function]}
+  >
+    <div
+      className="jsx-3563057876 button-wrapper"
+    >
+      <Button
+        ghost={false}
+        loading={false}
+        prefixCls="ant-btn"
+        shape="circle"
+      >
+        <Svg
+          className="app-icon-svg"
+          name="filter"
+        />
+      </Button>
+    </div>
+    <div
+      className="jsx-3563057876 inner-wrapper"
+    >
+      <Sider
+        collapsed={true}
+        collapsedWidth="98"
+        collapsible={true}
+        defaultCollapsed={false}
+        prefixCls="ant-layout-sider"
+        reverseArrow={false}
+        style={Object {}}
+        trigger={null}
+        width="260"
+      />
+    </div>
+  </EventHandler>
+</div>
+`;

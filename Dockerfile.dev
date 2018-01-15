@@ -1,0 +1,14 @@
+FROM node:9.3.0-alpine
+
+# Create app directory
+WORKDIR /usr/src/app
+
+# For npm@5 or later, copy package-lock.json as well
+COPY package.json package-lock.json ./
+
+RUN npm install
+RUN apk --no-cache add bash
+# Bundle app source
+COPY . .
+
+EXPOSE 3001

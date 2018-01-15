@@ -1,0 +1,82 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`render() with empty items 1`] = `
+<div
+  className="jsx-265714823 root app-container"
+>
+  <JSXStyle
+    css=".root.jsx-265714823{padding-bottom:30px;}.root.jsx-265714823 .total{text-align:right;font-size:10px;color:#b2bdcb;}.root.jsx-265714823 .price-wrapper{margin-left:5px;color:#062f49;font-size:18px;font-weight:bold;}.cart-menu-wrapper.jsx-265714823{margin-bottom:25px;}.button-wrapper.jsx-265714823{text-align:right;}.total.jsx-265714823{margin-bottom:30px;}"
+    styleId="265714823"
+  />
+  <h2
+    className="jsx-265714823 app-text-empty"
+  >
+    Please add a product to card
+  </h2>
+</div>
+`;
+
+exports[`render() with items 1`] = `
+<div
+  className="jsx-265714823 root app-container"
+>
+  <JSXStyle
+    css=".root.jsx-265714823{padding-bottom:30px;}.root.jsx-265714823 .total{text-align:right;font-size:10px;color:#b2bdcb;}.root.jsx-265714823 .price-wrapper{margin-left:5px;color:#062f49;font-size:18px;font-weight:bold;}.cart-menu-wrapper.jsx-265714823{margin-bottom:25px;}.button-wrapper.jsx-265714823{text-align:right;}.total.jsx-265714823{margin-bottom:30px;}"
+    styleId="265714823"
+  />
+  <div
+    className="jsx-265714823"
+  >
+    <div
+      className="jsx-265714823 cart-menu-wrapper"
+    >
+      <Connect(CartItems)
+        cssModificationClass="has-border-bottom"
+        mayChangeAmountItems={true}
+        mayDeleteItems={true}
+        size="large"
+      />
+    </div>
+    <Row
+      align="middle"
+      gutter={0}
+      justify="end"
+      type="flex"
+    >
+      <Col
+        pull={1}
+        span={23}
+      >
+        <div
+          className="jsx-265714823 total"
+        >
+          Total
+          :
+          <span
+            className="jsx-265714823 price-wrapper"
+          >
+            <Connect(Price)
+              currency="€"
+              price={25}
+            />
+          </span>
+        </div>
+      </Col>
+    </Row>
+    <div
+      className="jsx-265714823 button-wrapper"
+    >
+      <Button
+        ghost={false}
+        loading={false}
+        onClick={[Function]}
+        prefixCls="ant-btn"
+        size="large"
+        type="primary"
+      >
+        Check Out
+      </Button>
+    </div>
+  </div>
+</div>
+`;

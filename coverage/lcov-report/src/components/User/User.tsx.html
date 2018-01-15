@@ -1,0 +1,344 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for src/components/User/User.tsx</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../prettify.css" />
+    <link rel="stylesheet" href="../../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../../index.html">All files</a> / <a href="index.html">src/components/User</a> User.tsx
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">7.41% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>2/27</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/6</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>0/11</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">7.69% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>2/26</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import React from 'react';
+import { connect } from 'react-redux';
+import { matchPath } from 'react-router';
+import { RouterState, push } from 'connected-react-router';
+import _ from 'lodash';
+import { Tabs } from 'antd';
+import { IObject } from 'src/core/interfaces/IObject';
+import dispatch from 'src/store/dispatch';
+import Orders from 'src/components/UserOrders';
+import Account from 'src/components/UserAccount';
+import Purchases from 's<span class="fstat-no" title="function not covered" >rc</span>/component<span class="cstat-no" title="statement not covered" >s/UserPurchases';</span>
+&nbsp;
+interface IOwnProps {}
+&nbsp;
+interface IConnectedState {
+  ro<span class="fstat-no" title="function not covered" >ut</span>er: RouterState;
+  ui: Al<span class="cstat-no" title="statement not covered" >icanto.Models.UI;</span>
+}<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" ></span>
+type IProps = IOwnPro<span class="fstat-no" title="function not covered" >ps</span> &amp; I<span class="cstat-no" title="statement not covered" >ConnectedSta</span>te;
+<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" ></span></span>
+interface IState {<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" ></span></span>
+  activeKey: string;
+}<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" ></span>
+const mapStateToProps = (state: Store.IState) =&gt; ({
+  router: state.router,
+  ui: st<span class="cstat-no" title="statement not covered" >ate.ui,<span class="fstat-no" title="function not covered" ></span></span>
+});<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" ></span>
+const WrappedUser = connect&lt;<span class="cstat-no" title="statement not covered" >IConnectedState, undefined, IOwnP</span>rops&gt;(mapStateToProps)(
+  class User extends React.Compone<span class="cstat-no" title="statement not covered" >nt&lt;IProps, IState&gt; {</span>
+    readonly def<span class="cstat-no" title="statement not covered" >aultKey = 'account';</span>
+&nbsp;
+    readonly tabs: IObject&lt;React.StatelessComponent&gt; = {
+      account: () =&gt; &lt;Account /&gt;,
+      purchases: () =&gt; &lt;Purchases /&gt;,
+      or<span class="cstat-no" title="statement not covered" >ders: () =&gt; &lt;Orders <span class="fstat-no" title="function not covered" >/&gt;</span>,</span>
+    };<span class="cstat-no" title="statement not covered" ></span>
+&nbsp;
+    readonly tabKeys = Object.keys(this.tabs);
+<span class="fstat-no" title="function not covered" ></span>
+    stat<span class="cstat-no" title="statement not covered" >e: IState = {</span>
+      activeKey: this.defaultKey,
+<span class="fstat-no" title="function not covered" >    };</span>
+<span class="cstat-no" title="statement not covered" ></span>
+    setActiv<span class="cstat-no" title="statement not covered" >eKey = (pathname: string) =&gt; {</span>
+      const match = matchPath(pathname, { path: '/user/:key' });
+      if (!_.isNull(match)) {
+<span class="fstat-no" title="function not covered" ></span>        const key = _.get(match.params, 'key', null);
+        const activeKey<span class="cstat-no" title="statement not covered" > = this.tabKeys.indexOf(ke</span>y) === -1 ? this.defaultKey : key;
+<span class="cstat-no" title="statement not covered" >        this.setState({</span>
+          activeKey,
+        });<span class="fstat-no" title="function not covered" ></span>
+      }<span class="cstat-no" title="statement not covered" ></span>
+    };<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" ></span>
+    handleChange = (activeKey: string) =&gt; {
+      dispatch(push(`/user/${activeKey}`));
+    };
+&nbsp;
+    componentWillMount() {
+      this.setActiveKey(this.props.router.location.pathname);
+    }
+&nbsp;
+    componentWillReceiveProps(nextProps: IProps) {
+      if (this.props.router.location.pathname !== nextProps.router.location.pathname) {
+        this.setActiveKey(nextProps.router.location.pathname);
+      }
+    }
+&nbsp;
+    render() {
+      const userUI = this.props.ui.routes.user;
+      return (
+        &lt;div className="root app-container"&gt;
+          &lt;Tabs activeKey={this.state.activeKey} onChange={this.handleChange}&gt;
+            {this.tabKeys.map(key =&gt; {
+              const title = _.get(userUI, `${key}.title.i18n.defaultText`, '');
+              const Tab = this.tabs[key];
+              return (
+                &lt;Tabs.TabPane key={key} tab={title}&gt;
+                  &lt;Tab /&gt;
+                &lt;/Tabs.TabPane&gt;
+              );
+            })}
+          &lt;/Tabs&gt;
+        &lt;/div&gt;
+      );
+    }
+  },
+);
+&nbsp;
+export default WrappedUser;
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Fri Dec 29 2017 11:52:09 GMT+0300 (MSK)
+</div>
+</div>
+<script src="../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../sorter.js"></script>
+</body>
+</html>

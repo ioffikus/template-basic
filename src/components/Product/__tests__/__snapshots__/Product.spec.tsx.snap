@@ -1,0 +1,54 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`render() 1`] = `
+<div
+  className="jsx-3486026754 root app-container"
+>
+  <JSXStyle
+    css=".root.jsx-3486026754 .header{margin-bottom:55px;padding-bottom:4px;border-bottom:1px solid #e5ecf4;}.root.jsx-3486026754 .content{margin-bottom:20px;}"
+    styleId="3486026754"
+  />
+  <Row
+    align="bottom"
+    className="header"
+    gutter={0}
+    justify="space-between"
+    type="flex"
+  >
+    <Col
+      span={20}
+    >
+      <Connect(Breadcrumbs)
+        for="product"
+      />
+    </Col>
+    <Col
+      span={4}
+    >
+      <Connect(Social) />
+    </Col>
+  </Row>
+  <Row
+    gutter={30}
+    type="flex"
+  >
+    <Col
+      className="content"
+      md={12}
+      sm={24}
+      xs={24}
+    >
+      <Connect(ProductImagePreview) />
+    </Col>
+    <Col
+      className="content"
+      md={12}
+      sm={24}
+      xs={24}
+    >
+      <Connect(Description) />
+    </Col>
+  </Row>
+  <Connect(Details) />
+</div>
+`;

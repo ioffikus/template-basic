@@ -1,0 +1,41 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "outDir": "./dist/",
+    "target": "es6",
+    "diagnostics": true,
+    "sourceMap": true,
+    "noImplicitAny": true,
+    "allowSyntheticDefaultImports": true,
+    "module": "es6",
+    "moduleResolution": "node",
+    "alwaysStrict": true,
+    "allowJs": false,
+    "pretty": true,
+    "noUnusedLocals": true,
+    "jsx": "preserve",
+    "paths": {
+      "*": ["types/*"],
+      "src/*": ["src/*"]
+    },
+    "lib": ["es6", "es7", "dom"],
+    "typeRoots": ["node_modules/@types"],
+    "removeComments": false
+  },
+  "awesomeTypescriptLoaderOptions": {
+    "useBabel": true,
+    "useCache": true
+  },
+  "exclude": [
+    "node_modules",
+    "docker",
+    "dist",
+    "webpack",
+    "logs",
+    "coverage",
+    "bin",
+    "src/**/__mocks__/*.snap",
+    "src/**/**.test.ts",
+    "src/**/**.test.tsx"
+  ]
+}

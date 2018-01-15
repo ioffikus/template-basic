@@ -1,0 +1,129 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`render() correct with categories 1`] = `
+<div
+  className="jsx-93181092 root"
+>
+  <JSXStyle
+    css=".root.jsx-93181092 .filters{max-width:100%;}.root.jsx-93181092 .filters .ant-radio-button-wrapper{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;line-height:1.5;height:auto;min-height:20px;white-space:normal;padding-top:4px;padding-bottom:4px;}.root.jsx-93181092 .filters .ant-radio-button-wrapper + .ant-radio-button-wrapper{margin-top:10px;}"
+    styleId="93181092"
+  />
+  <RadioGroup
+    className="filters"
+    disabled={false}
+    onChange={[Function]}
+    value="all"
+  >
+    <RadioButton
+      prefixCls="ant-radio-button"
+      value="all"
+    >
+      All categories
+    </RadioButton>
+    <RadioButton
+      key="23"
+      prefixCls="ant-radio-button"
+      value={23}
+    >
+      Adventure novel
+    </RadioButton>
+    <RadioButton
+      key="29"
+      prefixCls="ant-radio-button"
+      value={29}
+    >
+      Biography
+    </RadioButton>
+    <RadioButton
+      key="35"
+      prefixCls="ant-radio-button"
+      value={35}
+    >
+      books
+    </RadioButton>
+    <RadioButton
+      key="37"
+      prefixCls="ant-radio-button"
+      value={37}
+    >
+      eBooks
+    </RadioButton>
+  </RadioGroup>
+</div>
+`;
+
+exports[`render() correct with initialState 1`] = `
+<div
+  className="jsx-93181092 root"
+>
+  <JSXStyle
+    css=".root.jsx-93181092 .filters{max-width:100%;}.root.jsx-93181092 .filters .ant-radio-button-wrapper{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;line-height:1.5;height:auto;min-height:20px;white-space:normal;padding-top:4px;padding-bottom:4px;}.root.jsx-93181092 .filters .ant-radio-button-wrapper + .ant-radio-button-wrapper{margin-top:10px;}"
+    styleId="93181092"
+  />
+  <RadioGroup
+    className="filters"
+    disabled={false}
+    onChange={[Function]}
+    value="all"
+  >
+    <RadioButton
+      prefixCls="ant-radio-button"
+      value="all"
+    >
+      All categories
+    </RadioButton>
+  </RadioGroup>
+</div>
+`;
+
+exports[`render() with selected value is different from default 1`] = `
+<div
+  className="jsx-93181092 root"
+>
+  <JSXStyle
+    css=".root.jsx-93181092 .filters{max-width:100%;}.root.jsx-93181092 .filters .ant-radio-button-wrapper{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;line-height:1.5;height:auto;min-height:20px;white-space:normal;padding-top:4px;padding-bottom:4px;}.root.jsx-93181092 .filters .ant-radio-button-wrapper + .ant-radio-button-wrapper{margin-top:10px;}"
+    styleId="93181092"
+  />
+  <RadioGroup
+    className="filters"
+    disabled={false}
+    onChange={[Function]}
+    value={23}
+  >
+    <RadioButton
+      prefixCls="ant-radio-button"
+      value="all"
+    >
+      All categories
+    </RadioButton>
+    <RadioButton
+      key="23"
+      prefixCls="ant-radio-button"
+      value={23}
+    >
+      Adventure novel
+    </RadioButton>
+    <RadioButton
+      key="29"
+      prefixCls="ant-radio-button"
+      value={29}
+    >
+      Biography
+    </RadioButton>
+    <RadioButton
+      key="35"
+      prefixCls="ant-radio-button"
+      value={35}
+    >
+      books
+    </RadioButton>
+    <RadioButton
+      key="37"
+      prefixCls="ant-radio-button"
+      value={37}
+    >
+      eBooks
+    </RadioButton>
+  </RadioGroup>
+</div>
+`;

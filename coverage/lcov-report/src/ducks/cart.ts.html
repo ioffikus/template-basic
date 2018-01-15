@@ -1,0 +1,1886 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for src/ducks/cart.ts</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../prettify.css" />
+    <link rel="stylesheet" href="../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../index.html">All files</a> / <a href="index.html">src/ducks</a> cart.ts
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">84.78% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>245/289</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">64.06% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>41/64</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">85.33% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>64/75</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">83.33% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>220/264</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line high'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199
+200
+201
+202
+203
+204
+205
+206
+207
+208
+209
+210
+211
+212
+213
+214
+215
+216
+217
+218
+219
+220
+221
+222
+223
+224
+225
+226
+227
+228
+229
+230
+231
+232
+233
+234
+235
+236
+237
+238
+239
+240
+241
+242
+243
+244
+245
+246
+247
+248
+249
+250
+251
+252
+253
+254
+255
+256
+257
+258
+259
+260
+261
+262
+263
+264
+265
+266
+267
+268
+269
+270
+271
+272
+273
+274
+275
+276
+277
+278
+279
+280
+281
+282
+283
+284
+285
+286
+287
+288
+289
+290
+291
+292
+293
+294
+295
+296
+297
+298
+299
+300
+301
+302
+303
+304
+305
+306
+307
+308
+309
+310
+311
+312
+313
+314
+315
+316
+317
+318
+319
+320
+321
+322
+323
+324
+325
+326
+327
+328
+329
+330
+331
+332
+333
+334
+335
+336
+337
+338
+339
+340
+341
+342
+343
+344
+345
+346
+347
+348
+349
+350
+351
+352
+353
+354
+355
+356
+357
+358
+359
+360
+361
+362
+363
+364
+365
+366
+367
+368
+369
+370
+371
+372
+373
+374
+375
+376
+377
+378
+379
+380
+381
+382
+383
+384
+385
+386
+387
+388
+389
+390
+391
+392
+393
+394
+395
+396
+397
+398
+399
+400
+401
+402
+403
+404
+405
+406
+407
+408
+409
+410
+411
+412
+413
+414
+415
+416
+417
+418
+419
+420
+421
+422
+423
+424
+425
+426
+427
+428
+429
+430
+431
+432
+433
+434
+435
+436
+437
+438
+439
+440
+441
+442
+443
+444
+445
+446
+447
+448
+449
+450
+451
+452
+453
+454
+455
+456
+457
+458
+459
+460
+461
+462
+463
+464
+465
+466
+467
+468
+469
+470
+471
+472
+473
+474
+475
+476
+477
+478
+479
+480
+481
+482
+483
+484
+485
+486
+487
+488
+489
+490
+491
+492
+493
+494
+495
+496
+497
+498
+499
+500
+501
+502
+503
+504
+505
+506
+507
+508
+509
+510
+511
+512
+513
+514
+515
+516
+517
+518
+519
+520
+521
+522
+523
+524
+525
+526
+527
+528
+529
+530
+531
+532
+533
+534
+535
+536
+537
+538
+539
+540
+541
+542
+543
+544
+545
+546
+547
+548
+549
+550
+551
+552
+553
+554
+555
+556
+557
+558
+559
+560
+561
+562
+563
+564
+565
+566
+567
+568
+569
+570
+571
+572
+573
+574
+575
+576
+577
+578
+579
+580
+581
+582
+583
+584
+585
+586
+587
+588
+589
+590
+591
+592
+593
+594
+595
+596
+597
+598
+599
+600
+601
+602
+603
+604
+605
+606
+607
+608</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">11x</span>
+<span class="cline-any cline-yes">11x</span>
+<span class="cline-any cline-yes">11x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">11x</span>
+<span class="cline-any cline-yes">11x</span>
+<span class="cline-any cline-yes">11x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">11x</span>
+<span class="cline-any cline-yes">11x</span>
+<span class="cline-any cline-yes">11x</span>
+<span class="cline-any cline-yes">11x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">11x</span>
+<span class="cline-any cline-yes">11x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">11x</span>
+<span class="cline-any cline-yes">11x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">11x</span>
+<span class="cline-any cline-yes">11x</span>
+<span class="cline-any cline-yes">11x</span>
+<span class="cline-any cline-yes">11x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">11x</span>
+<span class="cline-any cline-yes">11x</span>
+<span class="cline-any cline-yes">11x</span>
+<span class="cline-any cline-yes">13x</span>
+<span class="cline-any cline-yes">11x</span>
+<span class="cline-any cline-yes">15x</span>
+<span class="cline-any cline-yes">11x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">11x</span>
+<span class="cline-any cline-yes">14x</span>
+<span class="cline-any cline-yes">14x</span>
+<span class="cline-any cline-yes">14x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">11x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">11x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">11x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">11x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">11x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">8x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">11x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">11x</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">11x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">11x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">11x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">11x</span>
+<span class="cline-any cline-yes">11x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { createAction, createReducer } from 'redux-act';
+import { AxiosResponse } from 'axios';
+import _ from 'lodash';
+import { BusinessLogicError } from 'src/store/common';
+import { safelyParseJSON } from 'src/helpers/safelyParseJSON';
+import { IObject } from 'src/core/interfaces/IObject';
+import { GET, POST, PUT, DELETE } from 'src/core/API';
+import EndpointsConfig from 'src/configs/endpoints';
+&nbsp;
+export const REDUCER = 'CART';
+const NS = `${REDUCER}__`;
+&nbsp;
+export interface ICartState extends Store.IReduxCommonState {
+  id: number;
+  items: Alicanto.Models.CatalogItem[];
+  itemsCount: number;
+  totalPrice: number;
+}
+&nbsp;
+export const initialState: ICartState = {
+  id: null,
+  items: [],
+  itemsCount: 0,
+  totalPrice: 0,
+  isRequestError: false,
+  isRequesting: false,
+};
+&nbsp;
+const reducer = createReducer&lt;ICartState&gt;({}, initialState);
+&nbsp;
+const addProductToCart = createAction&lt;Alicanto.Models.CatalogItem&gt;(`${NS}ADD_PRODUCT_TO_CART`);
+reducer.on(addProductToCart, (state, product) =&gt; ({
+  ...state,
+  items: [
+    ...state.items,
+    {
+      ...product,
+    },
+  ],
+  itemsCount: state.itemsCount + 1,
+  totalPrice: (state.totalPrice * 100 + product.schema_fields.price.value * 100) / 100,
+}));
+&nbsp;
+const deleteProductFromCart = createAction&lt;number&gt;(`${NS}DELETE_PRODUCT_FROM_CART`);
+reducer.on(deleteProductFromCart, (state, index) =&gt; ({
+  ...state,
+  items: state.items.filter((_, i) =&gt; i !== index),
+  itemsCount: state.itemsCount - state.items[index].count,
+  totalPrice: (state.totalPrice * 100 - state.items[index].schema_fields.price.value * 100) / 100,
+}));
+&nbsp;
+const increaseProductQuantity = createAction&lt;number&gt;(`${NS}INCREASE_PRODUCT_QUANTITY`);
+reducer.on(increaseProductQuantity, (state, index) =&gt; ({
+  ...state,
+  items: state.items
+    .slice(0, index)
+    .concat([
+      {
+    <span class="missing-if-branch" title="else path not taken" >E</span>    ...state.items[index],
+        count: state.items[index].count + 1,
+      },<span class="missing-if-branch" title="else path not taken" >E</span>
+    ])
+    .concat(<span class="missing-if-branch" title="else path not taken" >E</span>state.items.slice(index + 1)),
+  itemsCount: state.itemsCount + 1,
+  totalPrice: (state.totalPrice * 100 + state.items[index].schema_fields.price.value * 100) / 100,
+}));
+&nbsp;
+const decreaseProductQuantity = createAction&lt;number&gt;(`${NS}DECREASE_PRODUCT_QUANTITY`);
+reducer.on(decreaseProductQuantity, (state, index) =&gt; ({
+  ...state,
+  items: state.items
+    .slice(0, index)
+    <span class="missing-if-branch" title="else path not taken" >E</span>.concat([
+      {
+        ...state.items[index],
+        count: state.items[index].count - 1,
+      },
+    ])
+    <span class="missing-if-branch" title="else path not taken" >E</span>.concat(state.items.slice(index + 1)),
+  itemsCount: state.itemsCount - 1,
+  totalPrice: (state.totalPrice * 100 - state.items[index].schema_fields.price.value * 100) / 100,
+}));
+&nbsp;
+const blockItemIncrease = createAction&lt;number&gt;(`${NS}BLOCK_ITEM_INCREASE`);
+reducer.on(blockItemIncrease, (state, index) =&gt; ({
+  ...state,
+  items: state.items
+    .slice(0, index)
+    .concat([
+      {
+        ...state.items[index],
+        blockedIncreasing: true,
+      },
+    ])
+    .concat(state.i<span class="fstat-no" title="function not covered" >te</span>ms.slice(index + 1)),
+}));<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" ></span>
+const putProductsInStore = createAction&lt;Alicanto.Models.CatalogItem[]&gt;(`${NS}PUT_PRODUCTS_IN_STORE`);
+reducer.on(putProductsInStore, (state, items) =&gt; ({
+  ...state,
+  items: [...items],
+}));
+&nbsp;
+const putCartInStore = createAction&lt;{ id: number; itemsCount: number; totalPrice: number }&gt;(`${NS}PUT_CART_IN_STORE`);
+reducer.on(putCartInStore, (state, { id, itemsCount, totalPrice }) =&gt; ({
+  ...state,
+  id,
+  itemsCount,
+  totalPrice,
+}));
+<span class="missing-if-branch" title="if path not taken" >I</span>
+const callFailur<span class="cstat-no" title="statement not covered" >e = createAction(`${NS}C</span>ALL_FAILURE`);
+reducer.on(callF<span class="cstat-no" title="statement not covered" >ailure, sta</span>te =&gt; ({
+  ...state,<span class="cstat-no" title="statement not covered" ></span>
+  isRequestError: true,
+  isRequesting: false,
+}));
+&nbsp;
+const callSuccess = createAction(`${NS}CALL_SUCCESS`);
+reducer.on(callSuccess, state =&gt; ({
+  ...state,<span class="fstat-no" title="function not covered" ></span>
+  isRequestE<span class="cstat-no" title="statement not covered" >rror: false,</span>
+  isRequesti<span class="cstat-no" title="statement not covered" >ng: false,</span>
+}));
+&nbsp;
+const callRequest = createAction(`${NS}CALL_REQUEST`);
+reducer.on(callRequest, state =&gt; ({
+  ...state,
+  isRequestError: false,
+  isRequesting: true,
+}));
+&nbsp;
+export const getCartFromLocalStorage = (): Store.IReduxThunkCb =&gt; (dispatch, getState, xShopHeaders) =&gt; {
+  if (process.env.BROWSER) {
+    const s = window.localStorage.getItem('cart');
+    if (s) {
+      const localStorageCartState: ICartState = safelyParseJSON(s);
+      if (!_.isNull(localStorageCartState)) {
+        const { id, itemsCount, totalPrice, items } = localStorageCartState;
+        dispatch(putCartInStore({ id, itemsCount, totalPrice }));
+        dispatch(putProductsInStore(items));
+      }
+    }<span class="fstat-no" title="function not covered" ></span>
+  }<span class="cstat-no" title="statement not covered" ></span>
+  return Pro<span class="cstat-no" title="statement not covered" >mise.resolve();</span>
+};
+&nbsp;
+const setCartInLocalStorage = (cartState: ICartState) =&gt; {
+  if (process.env.BROWSER) {
+    const { items, itemsCount, totalPrice, id } = cartState;
+    window.localStorage.setItem('cart', JSON.stringify({ items, itemsCount, totalPrice, id }));
+  }
+};
+&nbsp;
+const removeCartFromLocalStorage = () =&gt; {
+  if (process.env.BROWSER) {
+    window.localStorage.removeItem('cart');
+  }
+};
+&nbsp;
+const getProducts = (): Store.IReduxThunkCb =&gt; (dispatch, getState, xShopHeaders) =&gt; {
+  return new Promise((resolve, reject) =&gt; {
+    dispatch(callRequest());
+    GET(
+      {
+        url: `${EndpointsConfig.CART_CURRENT_ITEMS}`,
+      },
+      xShopHeaders,
+    )
+      .then((resp: AxiosResponse) =&gt; {
+        const { results } = resp.data as Alicanto.API.GET_CART_CURRENT_ITEMS_RESPONSE;
+        dispatch(putProductsInStore(results));
+        dispatch(callSuccess());
+        reso<span class="missing-if-branch" title="else path not taken" >E</span>lve();
+      })
+      .catch(error =&gt; {
+        dispatch(callFailure());
+        reject(error);
+      });
+  });
+};
+&nbsp;
+const getCar<span class="cstat-no" title="statement not covered" >t = (): Store.IReduxThunk</span>Cb =&gt; (dispatch, getState, xShopHeaders) =&gt; {
+  return new<span class="cstat-no" title="statement not covered" > Promise((resolve, reject) =&gt; {</span>
+    dispatch(callRequest());
+    GET(<span class="fstat-no" title="function not covered" ></span>
+      {<span class="cstat-no" title="statement not covered" ></span>
+        url:<span class="cstat-no" title="statement not covered" > `${EndpointsCo</span>nfig.CART_CURRENT}`,
+      },
+      xShopHeaders,
+    )
+      .then((resp: AxiosResponse) =&gt; {
+        const { items_count, total, id } = resp.data as Alicanto.API.GET_CART_CURRENT_RESPONSE;
+        dispatch(putCartInStore({ id, itemsCount: items_count, totalPrice: parseFloat(total) }));
+        dispatch(callSuccess());
+        if (!items_count) {
+          dispatch(deleteCart());
+          resolve();
+          return;
+        }
+        return dispatch(getProducts()).then(() =&gt; {
+          setCartInLocalStorage(getState().cart);
+          resolve();
+        });
+      })
+      .catch(error =&gt; {
+        dispatch(callFailure());
+        reject(error);
+      });
+  });
+};<span class="branch-1 cbranch-no" title="branch not covered" ><span class="missing-if-branch" title="if path not taken" >I</span></span>
+<span class="cstat-no" title="statement not covered" ></span>
+/**<span class="cstat-no" title="statement not covered" ></span>
+ * If unauthenticate<span class="cstat-no" title="statement not covered" >d user've added</span> some products, then
+ * after login we pu<span class="cstat-no" title="statement not covered" >t items </span>on server,
+ * firstly check if there are repeated items
+ * in local storage and server. After that update cart info
+ */
+const putCart = (data: Alicanto.API.PUT_CART_CURRENT_BODY): Store.IReduxThunkCb =&gt; (
+  dispatch,
+  getState,
+  xShopHeaders,
+) =&gt; {
+  return new Promise((resolve, reject) =&gt; {
+    PUT(
+      {
+        data,
+        url: `${EndpointsConfig.CART_CURRENT}`,
+      },
+      xShopHeaders,
+    )<span class="fstat-no" title="function not covered" ></span>
+      .then((resp: A<span class="cstat-no" title="statement not covered" >xiosResponse) =&gt; {</span>
+        dispatch(cal<span class="cstat-no" title="statement not covered" >lSuccess());</span>
+        return dispatch(getCart()).then(resolve);
+      })
+      .catch(error =&gt; {
+        dispatch(callFailure());
+        reject(error);
+      });
+  });
+};
+&nbsp;
+const findUnicItems = (itemsInStore: Alicanto.Models.CatalogItem[], itemsInCart: Alicanto.Models.CatalogItem[]) =&gt; {
+  const cartIds: IObject&lt;Alicanto.Models.CatalogItem&gt; = {};
+  itemsInCart.forEach((item: Alicanto.Models.CatalogItem) =&gt; {
+    cartIds[item.item] = item;
+  });
+  return itemsIn<span class="missing-if-branch" title="else path not taken" >E</span>Store.filter(item =&gt; !(item.item in cartIds));
+};
+&nbsp;
+export const postLocalStorageCart = (): Store.IReduxThunkCb =&gt; (dispatch, getState, xShopHeaders) =&gt; {
+  return new Promise((resolve, reject) =&gt; {
+    const items = getState().cart.items;
+    if (_.isEmpty(items)) {
+      dispatch(getCart(<span class="fstat-no" title="function not covered" >))</span>.then(resolve, reject);
+      return;<span class="cstat-no" title="statement not covered" ></span>
+    }<span class="cstat-no" title="statement not covered" ></span>
+    dispatch(callRequest());
+    GET(
+      {
+        url: `${EndpointsConfig.CART_CURRENT_ITEMS}`,
+      },
+      xShopHeaders,
+    )
+      .then((resp: AxiosResponse) =&gt; {
+        const { results } = resp.data as Alicanto.API.GET_CART_CURRENT_ITEMS_RESPONSE;
+        const itemsInCart = results;
+        const unicItemsInStore = findUnicItems(items, itemsInCart);
+        const data: Alicanto.API.PUT_CART_CURRENT_BODY = {
+          items:<span class="missing-if-branch" title="else path not taken" >E</span> [],
+        };
+        if (!_.isEmp<span class="missing-if-branch" title="else path not taken" >E</span>ty(unicItemsInStore)) {
+          unicItemsInStore.forEach(item =&gt; {
+            data.items.push({
+              count: item.count,
+              item: item.item,
+            });
+          });
+          return dispatch(putCart(data)).then(resolve);
+        }<span class="cstat-no" title="statement not covered" ></span>
+        dispatch<span class="cstat-no" title="statement not covered" >(callSuccess());</span>
+        return dispatch(getCart()).then(resolve);
+      })<span class="fstat-no" title="function not covered" ></span>
+      .catch(err<span class="cstat-no" title="statement not covered" >or =&gt; {</span>
+        dispatch<span class="cstat-no" title="statement not covered" >(callFailure())</span>;
+        reject(error);
+      });
+  });
+};
+&nbsp;
+/**
+ * Dispatch action after click on 'add to card' button:
+ * first click will add item in the cart
+ * user <span class="missing-if-branch" title="else path not taken" >E</span>can press the button multiple times and this action will increase product quantity
+ * @param product
+ */
+export const addToCart = (product: Alicanto.Models.CatalogItem, cb: () =&gt; void): Store.IReduxThunkCb =&gt; (
+  dispatch,
+  getState,
+  xShopHeaders,
+) =&gt; {
+  return new Promise((resolve, reject) =&gt; {
+    const productBalance = product.balance;
+    const productIsUnlimited = product.is_unlimited;
+    const productUid = product.uid;
+    const items = getState().cart.items;
+    const itemIndex = items.findIndex(element =&gt; element.item === productUid);
+    const errorMsg = getState().ui.routes.cart.errors.moreThanInBalance.i18n.defaultText;
+    const isAuthenticated = getState().auth.isAuthenticated;
+    if (isAuthenticated) {
+      dispatch(callRequest());
+      if (itemIndex !== -1) {
+        const item = items[itemIndex];
+        if (prod<span class="missing-if-branch" title="if path not taken" >I</span>uctBalance &lt; item.count + 1 &amp;&amp; !productIsUnlimited) {
+          dispatch(c<span class="cstat-no" title="statement not covered" >allFailure());</span>
+          const error = new BusinessLogicError(errorMsg);
+          reject(error);
+          return;
+        }
+        const data: Alicanto.API.PUT_CART_CURRENT_ITEMS_ID_BODY = {
+          count: item.count + 1,
+          item: productUid,
+        };<span class="fstat-no" title="function not covered" ></span>
+        PUT(<span class="cstat-no" title="statement not covered" ></span>
+          {<span class="cstat-no" title="statement not covered" ></span>
+            data,
+            url: `${EndpointsConfig.CART_CURRENT_ITEMS}${item.id}`,
+          },
+          xShopHeaders,
+        )
+        <span class="missing-if-branch" title="if path not taken" >I</span>  .then((resp: AxiosResponse) =&gt; {
+<span class="cstat-no" title="statement not covered" >            dispatch(increaseProduct</span>Quantity(itemIndex));
+            setCartInLocalStorage(getState().cart);
+            dispatch(callSuccess());
+            resolve();
+          })
+          .catch(error =&gt; {
+            dispatch(callFailure());
+            reject(error);
+          });
+        return;
+      }
+      const data: Alicanto.API.POST_CART_CURRENT_ITEMS_BODY = {
+        <span class="missing-if-branch" title="if path not taken" >I</span>count: 1,
+        item<span class="cstat-no" title="statement not covered" >: productUi</span>d,
+      };<span class="cstat-no" title="statement not covered" ></span>
+      POST(
+        {
+          data,
+          url: `${EndpointsConfig.CART_CURRENT_ITEMS}`,
+        },
+        xShopHeaders,
+      )
+        .then((resp: AxiosResponse) =&gt; {
+          const data = resp.data as Alicanto.API.POST_CART_CURRENT_ITEMS_RESPONSE;
+          dispatch(addProductToCart(data));
+          if (cb) {
+            cb();
+          }
+          setCartInLocalStorage(getState().cart);
+          dispatch(callSuccess());
+          resolve();
+        })
+        .catch(error =&gt; {
+          dispatch(callFailure());
+          reject(error)<span class="fstat-no" title="function not covered" >;</span>
+        });<span class="cstat-no" title="statement not covered" ></span>
+      return;<span class="cstat-no" title="statement not covered" ></span>
+    }<span class="cstat-no" title="statement not covered" ></span>
+    // user isn't authenticated
+    if (itemIndex !== -1) {
+      dispatch(callRequest());
+      GET(
+        {
+          url: `${EndpointsConfig.PRODUCT}${product.uid}`,
+        },
+        xShopHeaders,
+      )
+        .then((resp: AxiosResponse) =&gt; {
+          const data = resp.data as Alicanto.API.GET_CATALOG_UID_RESPONSE;
+          const item = items[itemIndex];
+          if (item.count + 1 &lt; data.balance || data.is_unlimited) {
+            dispatch(increaseProductQuantity(itemIndex));
+            if (cb) {
+              cb();
+            }
+            setCartInLocalStorage(getState().cart);
+            dispatch(callSuccess());
+            resolve();
+            return;
+          }
+          const error = new BusinessLogicError(errorMsg);
+          return Promise.reject(error);
+        })
+        .catch(error =&gt; {
+        <span class="missing-if-branch" title="else path not taken" >E</span>  dispatch(callFailure());
+          reject(error);
+        });
+      return;
+    }
+    cons<span class="missing-if-branch" title="else path not taken" >E</span>t newProduct = { ...product };
+    newProduct.count = 1;
+    newProduct.item = product.uid;
+    delete newProduct.uid;
+    dispatch(addProductToCart(newProduct));
+    if (cb) {
+      cb();
+    }
+    setCartInLocalStorage(getState().cart);
+    resolve();
+  });<span class="missing-if-branch" title="if path not taken" >I</span>
+};<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" ></span>
+export const deleteFromCart = (productUid: string): Store.IReduxThunkCb =&gt; (dispatch, getState, xShopHeaders) =&gt; {
+  return new Promise((resolve, reject) =&gt; {
+    const items = getState().cart.items;
+    const itemIndex = items.findIndex(element =&gt; element.item === productUid);
+    const item = items[itemIndex];
+    const isAuthenticated = getState().auth.isAuthenticated;
+    if (isAuthenticated) {
+      dispatch(callRequest());
+      DELETE(
+        {
+          url: `${EndpointsConfig.CART_CURRENT_ITEMS}${item.id}`,
+        },
+        xShopHeaders,
+      )
+        .then((resp: AxiosResponse) =&gt; {
+          dispatch(deleteProductFromCart(itemIndex));
+          if (getState().cart.itemsCount === 0) {
+            dispatch(deleteCart());
+          } else {
+            setCartInLo<span class="fstat-no" title="function not covered" >ca</span>lStorage(getState().cart);
+          }<span class="cstat-no" title="statement not covered" ></span>
+          dispat<span class="cstat-no" title="statement not covered" >ch(callSuccess(</span>));
+          resolve();
+        })
+        .catch(error =&gt; {
+          dispatch(callFailure());
+        <span class="missing-if-branch" title="else path not taken" >E</span>  reject(error);
+        });
+      return;
+    }
+    // user isn't authenticated
+    dispatch(deleteProductFromCart(itemIndex));
+    if (getState().cart.i<span class="cstat-no" title="statement not covered" >temsCount === 0) {</span>
+      dispatch(deleteC<span class="cstat-no" title="statement not covered" >art());</span>
+    } el<span class="cstat-no" title="statement not covered" >se {</span>
+      setCartInLocalStorage(getState().cart);
+    }
+    reso<span class="missing-if-branch" title="else path not taken" >E</span>lve();
+  });
+};
+&nbsp;
+export const in<span class="fstat-no" title="function not covered" >cr</span>easeQuantity = (productUid: string, cb: () =&gt; void): Store.IReduxThunkCb =&gt; (
+  dispat<span class="cstat-no" title="statement not covered" >ch,</span>
+  getState,<span class="cstat-no" title="statement not covered" ></span>
+  xShopHeaders,
+) =&gt; {<span class="cstat-no" title="statement not covered" ></span>
+  return new Promise((resolve, reject) =&gt; {
+    const items = getState().cart.items;
+    const itemIndex = items.findIndex(element =&gt; element.item === productUid);
+    if (itemIndex === -1) {
+      resolve();
+      return;
+    }
+    const item = items[itemIndex];
+    const isAuthenticated = getState().auth.isAuthenticated;
+    dispatch(callRequest());
+    if (isAuthenticated) {
+      const data: Alicanto.API.PUT_CART_CURRENT_ITEMS_ID_BODY = {
+        count: item.count + 1,
+        item: productUid,
+      };
+      PUT(
+        {
+          data,
+          url: `${EndpointsConfig.CART_CURRENT_ITEMS}${item.id}`,
+        },
+        xShopHeaders,
+      )
+        .then((resp: AxiosResponse) =&gt; {
+          dispatch(increaseProductQuantity(itemIndex));
+          setCartInLocalStorage(getState().cart);
+          dispatch(callSuccess());
+          resolve();
+        })
+        .catch(error =&gt; {
+          dispatch(blockItemIncrease(itemIndex));
+          dispatch(callFailure());
+          reject(error);
+        });
+      return;
+    }
+    // user isn't authenticated
+    GET(
+      {
+        url: `${EndpointsConfig.PRODUCT}${productUid}`,
+      },
+      xShopHeaders,
+    )
+      .then((resp: AxiosResponse) =&gt; {
+        const data = resp.data as Alicanto.API.GET_CATALOG_UID_RESPONSE;
+        if (item.count + 1 &lt; data.balance || data.is_unlimited) {
+          dispatch(increaseProductQuantity(itemIndex));
+          setCartInLocalStorage(getState().cart);
+          dispatch(callSuccess());
+          resolve();
+          return;
+        }
+        const errorMsg = getState().ui.routes.cart.errors.moreThanInBalance.i18n.defaultText;
+        return Promise.reject(new BusinessLogicError(errorMsg));
+      })
+      .catch(error =&gt; {
+        dispatch(blockItemIncrease(itemIndex));
+        dispatch(callFailure());
+        reject(error);
+      });
+  })
+    .then(() =&gt; {
+      if (cb) {
+        cb();
+      }
+    })
+    .catch(error =&gt; {
+      if (cb) {
+        cb();
+      }
+      return Promise.reject(error);
+    });
+};
+&nbsp;
+export const decreaseQuantity = (productUid: string, cb: () =&gt; void): Store.IReduxThunkCb =&gt; (
+  dispatch,
+  getState,
+  xShopHeaders,
+) =&gt; {
+  return new Promise((resolve, reject) =&gt; {
+    const items = getState().cart.items;
+    const itemIndex = items.findIndex(element =&gt; element.item === productUid);
+    if (itemIndex === -1) {
+      resolve();
+      return;
+    }
+    const item = items[itemIndex];
+    const isAuthenticated = getState().auth.isAuthenticated;
+    if (isAuthenticated) {
+      dispatch(callRequest());
+      const data: Alicanto.API.PUT_CART_CURRENT_ITEMS_ID_BODY = {
+        count: item.count - 1,
+        item: productUid,
+      };
+      PUT(
+        {
+          data,
+          url: `${EndpointsConfig.CART_CURRENT_ITEMS}${item.id}`,
+        },
+        xShopHeaders,
+      )
+        .then((resp: AxiosResponse) =&gt; {
+          dispatch(decreaseProductQuantity(itemIndex));
+          setCartInLocalStorage(getState().cart);
+          dispatch(callSuccess());
+          resolve();
+        })
+        .catch(error =&gt; {
+          dispatch(callFailure());
+          reject(error);
+        });
+      return;
+    }
+    // user isn't authenticated
+    if (item.count &gt; 1) {
+      dispatch(decreaseProductQuantity(itemIndex));
+      setCartInLocalStorage(getState().cart);
+      resolve();
+      return;
+    }
+    const errorMsg = getState().ui.routes.cart.errors.fewerThanOne.i18n.defaultText;
+    const error = new BusinessLogicError(errorMsg);
+    reject(error);
+  })
+    .then(() =&gt; {
+      if (cb) {
+        cb();
+      }
+    })
+    .catch(error =&gt; {
+      if (cb) {
+        cb();
+      }
+      return Promise.reject(error);
+    });
+};
+&nbsp;
+export const deleteCart = createAction(`${NS}RESET`);
+reducer.on(deleteCart, state =&gt; {
+  removeCartFromLocalStorage();
+  return {
+    ...state,
+    itemsCount: 0,
+    totalPrice: 0,
+    items: [],
+  };
+});
+&nbsp;
+export default reducer;
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Fri Dec 29 2017 11:52:09 GMT+0300 (MSK)
+</div>
+</div>
+<script src="../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../sorter.js"></script>
+</body>
+</html>

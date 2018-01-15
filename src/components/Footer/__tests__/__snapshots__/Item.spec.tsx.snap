@@ -1,0 +1,72 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`render() correctly 1`] = `
+<div
+  className="jsx-2832247461 root"
+>
+  <JSXStyle
+    css=".root.jsx-2832247461{padding:0 25px;}.title.jsx-2832247461{margin-bottom:10px;color:#062f49;font-size:24px;font-weigh:400;line-height:1.17;}.item.jsx-2832247461{margin-bottom:10px;}.root.jsx-2832247461 .link{color:inherit;line-height:2;}"
+    styleId="2832247461"
+  />
+  <h2
+    className="jsx-2832247461 title"
+  >
+    About
+  </h2>
+  <ul
+    className="jsx-2832247461"
+  >
+    <li
+      className="jsx-2832247461 item"
+      key="/link1"
+    >
+      <Link
+        className="link"
+        replace={false}
+        title="Our store"
+        to="/link1"
+      >
+        Our store
+      </Link>
+    </li>
+    <li
+      className="jsx-2832247461 item"
+      key="/link2"
+    >
+      <Link
+        className="link"
+        replace={false}
+        title="About company"
+        to="/link2"
+      >
+        About company
+      </Link>
+    </li>
+    <li
+      className="jsx-2832247461 item"
+      key="/link3"
+    >
+      <Link
+        className="link"
+        replace={false}
+        title="Terms & conditions"
+        to="/link3"
+      >
+        Terms & conditions
+      </Link>
+    </li>
+    <li
+      className="jsx-2832247461 item"
+      key="https://test.com"
+    >
+      <a
+        className="jsx-2832247461 link"
+        href="https://test.com"
+        title="Test title"
+      >
+        Test text
+      </a>
+    </li>
+  </ul>
+</div>
+`;

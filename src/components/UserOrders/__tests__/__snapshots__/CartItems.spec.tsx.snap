@@ -1,0 +1,111 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`render() with items 1`] = `
+<div
+  className="jsx-256313609 root"
+>
+  <JSXStyle
+    css=".root.jsx-256313609 .ant-table-row:last-child td{border:0;}"
+    styleId="256313609"
+  />
+  <Table
+    bordered={false}
+    className=""
+    columns={
+      Array [
+        Object {
+          "key": "image",
+          "render": [Function],
+          "title": "image",
+        },
+        Object {
+          "key": "name",
+          "render": [Function],
+          "title": "name",
+        },
+        Object {
+          "dataIndex": "count",
+          "title": "count",
+        },
+        Object {
+          "dataIndex": "price",
+          "render": [Function],
+          "title": "price",
+        },
+      ]
+    }
+    dataSource={
+      Array [
+        Object {
+          "count": 2,
+          "currency": "$",
+          "key": 83,
+          "name": "Sword of Destiny (The Witcher)",
+          "pictureUrl": "http://localhost:8000/media/item_pictures/2017-12-14T140837.2674370000dc74b408d40b4b7783ee3232c6554960.jpg",
+          "price": 0.01,
+          "uid": "3cf12d0021c3438c9d43",
+        },
+      ]
+    }
+    indentSize={20}
+    loading={false}
+    locale={Object {}}
+    pagination={false}
+    prefixCls="ant-table"
+    rowKey="key"
+    rowSelection={null}
+    showHeader={true}
+    size="large"
+    useFixedHeader={false}
+  />
+</div>
+`;
+
+exports[`render() without items 1`] = `
+<div
+  className="jsx-256313609 root"
+>
+  <JSXStyle
+    css=".root.jsx-256313609 .ant-table-row:last-child td{border:0;}"
+    styleId="256313609"
+  />
+  <Table
+    bordered={false}
+    className=""
+    columns={
+      Array [
+        Object {
+          "key": "image",
+          "render": [Function],
+          "title": "image",
+        },
+        Object {
+          "key": "name",
+          "render": [Function],
+          "title": "name",
+        },
+        Object {
+          "dataIndex": "count",
+          "title": "count",
+        },
+        Object {
+          "dataIndex": "price",
+          "render": [Function],
+          "title": "price",
+        },
+      ]
+    }
+    dataSource={Array []}
+    indentSize={20}
+    loading={false}
+    locale={Object {}}
+    pagination={false}
+    prefixCls="ant-table"
+    rowKey="key"
+    rowSelection={null}
+    showHeader={true}
+    size="large"
+    useFixedHeader={false}
+  />
+</div>
+`;

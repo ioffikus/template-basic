@@ -1,0 +1,1368 @@
+name: library # имя шаблона
+
+# ВНИМАНИЕ: поля i18n, description, settings внутри ui элементов - зарезервированы.
+
+# внутри компонента дублируем структуру html если много элементов,
+# там где, например в форме несколько label называем labels и используем как
+# ключ содержащий несколько элементов, где имя каждого уточняет его назначение
+ui:
+  # для компонентов используемых в роутах (дублируем структуру src/components)
+  # ключ может содержать два основных блока, это
+  # i18n - локализированные переводы
+  # settings - настройки отображения, которые может менять пользователь в dashbord или
+  # которые индивидуальны для домена (как это сейчас бывает для riga, poland, vgbil ...)
+  common:
+    footerLinks:
+      description: Ссылки в footer (навигация)
+      items:
+        about:
+          title:
+            i18n:
+              defaultText: About
+              description: Заголовок для колонки About
+          links:
+            /link1:
+              title:
+                i18n:
+                  defaultText: Our store
+                  description: Подсказка ссылки на страницу Our store
+              text:
+                i18n:
+                  defaultText: Our store
+                  description: Текст ссылки на страницу Our store
+            /link2:
+              title:
+                i18n:
+                  defaultText: About company
+                  description: Подсказка ссылки на страницу About company
+              text:
+                i18n:
+                  defaultText: About company
+                  description: Текст ссылки на страницу About company
+            /link3:
+              title:
+                i18n:
+                  defaultText: Terms & conditions
+                  description: Подсказка ссылки на страницу Terms & conditions
+              text:
+                i18n:
+                  defaultText: Terms & conditions
+                  description: Текст ссылки на страницу Terms & conditions
+        support:
+          title:
+            i18n:
+              defaultText: Support
+              description: Заголовок для колонки Support
+          links:
+            /link1:
+              title:
+                i18n:
+                  defaultText: FAQ
+                  description: Подсказка ссылки на страницу FAQ
+              text:
+                i18n:
+                  defaultText: FAQ
+                  description: Текст ссылки на страницу FAQ
+            /link2:
+              title:
+                i18n:
+                  defaultText: Support team
+                  description: Подсказка ссылки на страницу Support team
+              text:
+                i18n:
+                  defaultText: Support team
+                  description: Текст ссылки на страницу Support team
+            /link3:
+              title:
+                i18n:
+                  defaultText: Feedback
+                  description: Подсказка ссылки на страницу Feedback
+              text:
+                i18n:
+                  defaultText: Feedback
+                  description: Текст ссылки на страницу Feedback
+        payment:
+          title:
+            i18n:
+              defaultText: Payment and delivery
+              description: Заголовок для колонки Payment and delivery
+          links:
+            /link1:
+              title:
+                i18n:
+                  defaultText: Payment methods
+                  description: Подсказка ссылки на страницу Payment methods
+              text:
+                i18n:
+                  defaultText: Payment methods
+                  description: Текст ссылки на страницу Payment methods
+            /link2:
+              title:        
+                i18n:
+                  defaultText: Free delivery
+                  description: Подсказка ссылки на страницу Free delivery
+              text:        
+                i18n:
+                  defaultText: Free delivery
+                  description: Текст ссылки на страницу Free delivery
+    footerContacts:
+      contacts:
+        description: Блок контактов в footer
+        zip:
+          i18n:
+            defaultText: '2025'
+            description: Индекс организации
+        address:
+          i18n:
+            defaultText: Hamilton Avenue, San Jose
+            description: Адрес организации
+        city:
+          i18n:
+            defaultText: California 95125
+            description: Город организации
+        country:
+          i18n:
+            defaultText: USA
+            description: Страна организации
+        phone:
+          i18n:
+            defaultText: (408) 376-7400
+            description: Телефон организации
+          settings:
+            link: '+74083767400'
+    footerCopyright:
+      description: Копирайт в footer
+      text:
+        i18n:
+          defaultText: PUMA STORE
+          description: Текст копирайта
+    headerLogo:  
+      description: Блок логотипа в заголовке
+      title:
+        i18n:
+          defaultText: Puma Store
+          description: Название сайта в заголовке
+        translations:
+          lv:
+            i18n:
+              defaultText: Puma Veikals
+              description: Перевод названия сайта в заголовке на латышский
+          ru:
+            i18n:
+              defaultText: Пума Стор
+              description: Перевод названия сайта в заголовке на русский
+          pl:
+            i18n:
+              defaultText: Puma Sklep
+              description: Перевод названия сайта в заголовке на польский
+    headerSearchForm:
+      description: Форма наверху страницы
+      placeholder:
+        i18n:
+          defaultText: Search 
+          description: Placeholder в поле ввода
+    catalogSearchForm:
+      description: Форма на витрине товаров
+      placeholder:
+        i18n:
+          defaultText: Search 
+          description: Placeholder в поле ввода
+    generalLinks:
+      description: Названия ссылок на сайте
+      catalog:
+        i18n:
+          defaultText: Catalog
+          description: Ссылка на витрину товаров
+      delivery:
+        i18n:
+          defaultText: Delivery 
+          description: Ссылка на описание способов доставки
+      about:
+        i18n:
+          defaultText: About 
+          description: Ссылка "о компании"
+      logout:
+        i18n:
+          defaultText: Logout # profile.link.logout
+          description: Ссылка для выхода из аккаунта
+      advancedSearch:
+        i18n:
+          defaultText: Advanced search # header.menu.link.advancedSearch
+          description: Ссылка расширенный поиск
+      collections:
+        i18n:
+          defaultText: Collections # header.menu.link.collections
+          description: Ссылка на коллекции (каталог)
+      cart:
+        i18n:
+          defaultText: Cart # header.menu.link.cart
+          description: Ссылка на корзину
+      userProfile:
+        i18n:
+          defaultText: Profile # header.menu.link.userProfile
+          description: Ссылка на профиль пользователя (используется если у авторизованного пользователя не передано имя)
+      signIn:
+        i18n:
+          defaultText: Sign in # header.menu.link.signIn
+          description: Ссылка на страницу регистрации
+      account:
+        i18n:
+          defaultText: Account # user.link.account
+          description: Ссылка на страницу аккаунта пользователя
+      purchases:
+        i18n:
+          defaultText: My Purchases # header.menu.link.purchases
+          description: Ссылка на страницу мои покупки
+        settings:
+          isVisible: true
+      orders:
+        i18n:
+          defaultText: My Orders # profile.link.orders
+          description: Ссылка на страницу мои заказы
+        settings:
+          isVisible: true
+    breadcrumbs:
+      description: Хлебные крошки (помогают пользователю в навигации)
+      home:
+        i18n:
+          defaultText: Home 
+          description: Ссылка на главную страницу
+      collections:
+        i18n:
+          defaultText: Collections 
+          description: Ссылка на коллекции (каталог)
+      cart:
+        i18n:
+          defaultText: Cart 
+          description: Сссылка на корзину
+    tables:
+      description: Общие элементы для таблиц (используются на нескольких страницах)
+      cells:
+        description: Заголовки таблиц
+        title:
+          i18n:
+            defaultText: title # catalog.table.cell.title
+            description: заглавие
+        author:
+          i18n:
+            defaultText: author # catalog.table.cell.author
+            description: автор
+        cost:
+          i18n:
+            defaultText: cost # catalog.table.cell.cost
+            description: цена
+        quantity:
+          i18n:
+            defaultText: quantity # catalog.table.cell.quantity
+            description: количество
+        desc: # description - зарезервировано
+          i18n:
+            defaultText: description # catalog.table.cell.description
+            description: описание
+        status:
+          i18n:
+            defaultText: status # orders.table.cell.status
+            description: статус заказа
+        date:
+          i18n:
+            defaultText: date # orders.table.cell.date
+            description: дата заказа
+        itemsCount:
+          i18n:
+            defaultText: items # orders.table.cell.items
+            description: кол-во элементов
+        total:
+          i18n:
+            defaultText: total # orders.table.cell.total
+            description: итоговая стоимость
+        image:
+          i18n:
+            defaultText: image
+            description: изображение
+        name:
+          i18n:
+            defaultText: name
+            description: имя
+        count:
+          i18n:
+            defaultText: count
+            description: количество
+        price:
+          i18n:
+            defaultText: price
+            description: цена
+        actions:
+          i18n:
+            defaultText: actions
+            description: действия
+    buttons:
+      description: Кнопки сайта (используются на нескольких страницах)
+      readMore:
+        i18n:
+          defaultText: read more # readMore.button
+          description: прочитать больше
+      goToCart: 
+        i18n: 
+          defaultText: Go to Cart
+          description: Перейти в корзину
+      addToCart:
+        i18n: 
+          defaultText: Add to Cart
+          description: Добавить в корзину
+      buyNow:
+        i18n: 
+          defaultText: Buy now
+          description: Купить сейчас
+      continueShopping:
+        i18n: 
+          defaultText: Continue shopping
+          description: Продолжить покупки
+      showMore:
+        i18n: 
+          defaultText: Show more
+          description: Показать ещё одну страницу каталога
+      nextStep:
+        i18n: 
+          defaultText: Next step
+          description: Следующий шаг
+      prevStep:
+        i18n: 
+          defaultText: Previous step
+          description: Предыдущий шаг
+      confirm:
+        i18n: 
+          defaultText: Confirm
+          description: Подтвердить
+      pay:
+        i18n: 
+          defaultText: Pay
+          description: Оплатить
+    tagsProduct:
+      description: Теги для продуктов
+      sale:
+        i18n:
+          defaultText: Sale
+          description: Продукт со скидкой
+      new:
+        i18n:
+          defaultText: New
+          description: Новый продукт
+    filters:
+      description: Фильтры каталога товаров
+      ordering:
+        description: Фильтр сортировки
+        title:
+          i18n:
+            defaultText: Order by
+            description: Заголовок фильтра сортировки
+        items:
+          orderingById:
+            i18n:
+              defaultText: Id
+              description: Сортировка по ID
+          orderingByPrice:
+            i18n:
+              defaultText: Cost
+              description: Сортировка по цене
+          orderingByName:
+            i18n:
+              defaultText: Title
+              description: Сортировка по заголовку
+      includeSubcaterogies:
+        description: Фильтр включающий в выборку сабкатегории
+        title:
+          i18n:
+            defaultText: Include subcategories
+            description: Заголовок фильтра сортировки
+      inStock:
+        description: Фильтр включающий в выборку сабкатегории
+        title:
+          i18n:
+            defaultText: In stock
+            description: Заголовок фильтра сортировки
+        state:
+          trueState:
+            i18n:
+              defaultText: Yes
+              description: Положительное сосотояние фильтра
+          falseState:
+            i18n:
+              defaultText: No
+              description: Отрицательное сосотояние фильтра
+      prices:
+        description: Фильтр сортировки по цене
+        title:
+          i18n:
+            defaultText: Prices
+            description: Заголовок фильтра сортировки
+      categories:
+        description: Фильтр сортировки по категориям
+        title:
+          i18n:
+            defaultText: Categories
+            description: Заголовок фильтра сортировки
+        items:
+          allCategories:
+            i18n:
+              defaultText: All categories
+              description: Сортировка по всем категориям
+          category1:
+            i18n:
+              defaultText: Category 1
+              description: Сортировка по категории 1
+          category2:
+            i18n:
+              defaultText: Category 2
+              description: Сортировка по категории 2
+    forms:
+      description: Формы (используются на нескольких страницах)
+      validation:
+        description: Сообщения при валидации данных в формах # валидация должна быть серверной, сообщения нужно убрать
+        cardNumber:
+          i18n:
+            defaultText: Card number must contain only numbers and/or spaces # form.validation.cardNumber
+            description: Номер карты
+        expDate:
+          i18n:
+            defaultText: Expiration date must be written in format MM/YY # form.validation.expDate
+            description: Дата на карте
+        notEmpty:
+          i18n:
+            defaultText: Please fill this field # form.validation.notEmpty
+            description: Поле не может быть пустым
+        email:
+          i18n:
+            defaultText: Please fill email correctly # form.validation.email
+            description: Корректный Email
+        minLengths:
+          description: Минимальная длина строки
+          6:
+            i18n:
+              defaultText: This field must contain at least 6 characters # form.validation.minLength.6
+              description: Поле не может быть меньше 6 символов
+    noImage:
+      description: Текст при отсутствии картинки (используются на нескольких страницах)
+      title:
+        i18n:
+          defaultText: No image available
+          description: Изображение отсутствует
+    categoriesMenu: 
+      copyright:
+        description: Копирайт в меню категорий
+        text:
+          i18n:
+            defaultText: Alicanto E-commerce Systems
+            description: Текст копирайта
+    locales:
+      description: Доступные языки интерфейса
+      items:
+        en-US:
+          i18n:
+            defaultText: English
+            description: Английский язык (локаль США)
+        lv-LV:
+          i18n:
+            defaultText: Latviešu
+            description: Латышский язык
+        ru-RU:
+          i18n:
+            defaultText: Русский
+            description: Русский язык
+        pl-PL:
+          i18n:
+            defaultText: Polski
+            description: Польский язык
+  # дублируем структуру роутов, выкидываем черезмерную вложенность (src/routes/)
+  routes:
+    description: Страница все категории
+    allCategories:
+      title:
+        i18n:
+          defaultText: Categories # allCategories.title
+          description: Заголовок
+    cart:
+      description: Страница корзина
+      title:
+        i18n:
+          defaultText: Cart # cart.title
+          description: Заголовок
+      emptyStatus:
+        i18n:
+          defaultText: Please add a product to card # cart.emptyStatus.message.text
+          description: Сообщение о том, что нет товаров в корзине
+      total:
+        i18n:
+          defaultText: Total # cart.total
+          description: Итоговая цена
+      tabs:
+        order:
+          i18n:
+            defaultText: You order
+            description: Шаг заказа
+        delivery:
+          i18n:
+            defaultText: Delivery
+            description: Шаг доставки
+        confirm:
+          i18n:
+            defaultText: Confirm
+            description: Шаг подтвердения данных
+        payment:
+          i18n:
+            defaultText: Payment
+            description: Шаг оплаты
+      errors:
+        description: Ошибки на странице
+        fewerThanOne:
+          i18n:
+            defaultText: You can't decrease amount fewer than 1 # cart.current.error.fewerThanOne
+            description: Вы не можете уменьшить количество меньше 1
+        moreThanInBalance:
+          i18n:
+            defaultText: There're not so many items in the balance # cart.current.error.moreThanInBalance
+            description: В балансе не так много элементов
+        anonCheckout:
+          i18n:
+            defaultText: Please login to pay your order # cart.error.anonCheckout
+            description: Нужно войти, что бы оплатить
+      checkout:
+        i18n:
+          defaultText: Check Out # cart.buttons.checkout
+          description: Кнопка оплаты
+      agree:
+        i18n:
+          defaultText: I agree # cart.agree.txt
+          description: Сообщение о согласие с правилами
+      userInfoForm:
+        description: Форма информации юзера для доставки
+        inputs:
+          description: Поля формы
+          name:
+            i18n:
+              defaultText: You Name
+              description: Имя пользователя
+          surname:
+            i18n:
+              defaultText: You Surname
+              description: Фамилия пользователя
+          email:
+            i18n:
+              defaultText: E-mail
+              description: E-mail пользователя
+          phoneNumber:
+            i18n:
+              defaultText: Phone Number
+              description: Номер телефона пользователя
+          country:
+            i18n:
+              defaultText: Country
+              description: Страна пользователя
+          stateRegion:
+            i18n:
+              defaultText: State/Region
+              description: Область или регион пользователя
+          zipCode:
+            i18n:
+              defaultText: ZIP Code
+              description: Почтовый индекс пользователя
+          address:
+            i18n:
+              defaultText: Address
+              description: Адрес пользователя
+      confirm:
+        description: Подтверждение заказа
+        labels:
+          description: Подписи для полей
+          purchaser:
+            i18n:
+              defaultText: Purchaser
+              description: Полное имя пользователя
+          phoneNumber:
+            i18n:
+              defaultText: Phone Number
+              description: Номер телефона пользователя
+          email:
+            i18n:
+              defaultText: E-mail
+              description: E-mail пользователя
+          address:
+            i18n:
+              defaultText: Address
+              description: Полный адрес пользователя
+      paymentForm:
+        description: Форма оплаты
+        title:
+          i18n:
+            defaultText: Checkout # payment.form.title
+            description: Заголовок формы
+        submit:
+          i18n:
+            defaultText: Pay # payment.form.submit
+            description: Кнопка оплатить
+        label:
+          i18n:
+            defaultText: VALID THRU 
+            description: Годен до...
+        inputs:
+          description: Поля формы (labels)
+          cardNumber:
+            i18n:
+              defaultText: Card Number # payment.form.input.cardNumber
+              description: Номер карты
+          expDate:
+            i18n:
+              defaultText: Expiration Date # payment.form.input.expDate
+              description: Срок действия
+          cardholderName:
+            i18n:
+              defaultText: Cardholder # payment.form.input.cardholderName
+              description: Имя держателя карты
+          securityCode:
+            i18n:
+              defaultText: CSV # payment.form.input.securityCode
+              description: Код безопасности
+          expDatePlaceholderMonth:
+            i18n:
+              defaultText: MM # payment.form.input.expDatePlaceholder
+              description: Placeholder срока действия карты
+          expDatePlaceholderYear:
+            i18n:
+              defaultText: YY # payment.form.input.expDatePlaceholder
+              description: Placeholder срока действия карты
+    catalog:
+      description: Страница каталога
+      header:
+        i18n:
+          defaultText: Catalog # catalog.header
+          description: Заголовок
+      count:
+        i18n:
+          defaultText: Count # catalog.count
+          description: Количество найденных товаров
+      filters:
+        description: Фильтры в каталоге
+        allCategories:
+          i18n:
+            defaultText: all categories # catalog.filter.all.categories
+            description: ссылка "все категории" в списке категорий
+        emptyTxt:
+          i18n:
+            defaultText: Sorry, we couldn't find any results for this search # catalog.filters.emptyTxt
+            description: ничего не найдено
+        header:
+          i18n:
+            defaultText: Filters # catalog.filters.header
+            description: Заголовок фильтров
+      orderings:
+        label:
+          i18n:
+            defaultText: Order by # catalog.ordering.label
+            description: Заголовок сортировок в фильтре
+      addedToCart:
+        i18n:
+          defaultText: Added to Cart
+          description: Сообщение "Добавлено в крозину"
+    home:
+      description: Главная страница
+      aboutUs:
+        description: Секция "О нас"
+        header:
+          i18n:
+            defaultText: About us # home.aboutUs.header
+            description: Заголовок
+        items:
+          item1:
+            i18n: # home.aboutUs.items.1
+              defaultText: RTU Press provide students, research and academic personnel with educational and scientific literature. In the course of time, RTU editorial and publishing units have survived different kinds of structural changes, but it has always provided RTU students and personnel with the required publications disregarding the socio-economic conditions.
+              description: Элемент 1
+          item2:
+            i18n: # home.aboutUs.items.2
+              defaultText: RTU Press annually publishes from 20 to 25 collections of scientific articles, 8 to 10 scientific monographs, approximately 50 promotion works and 100 promotion work summaries in Latvian and English, approximately 30 different educational aids in accordance with the faculty, institute, and other RTU structural unit orders. All publications are assigned an ISBN or an ISSN code.
+              description: Элемент 2
+          item3:
+            i18n: # home.aboutUs.items.3
+              defaultText: At present, RTU Press publishes 19 scientific journal series, 75 % of them are published in English, 11 of them are published in the open access journal management system  Open Journal System. All articles that have been published in English are verified for plagiarism by using software CrossCheck. If the journal corresponds to the quality criteria, each journal article is assigned a unique identification number DOI (Digital object identifier).
+              description: Элемент 3
+          item4:
+            i18n: # home.aboutUs.items.4
+              defaultText: RTU has concluded agreements with international non-profit organizations CrossRef and ORCID, which RTU Press actively cooperates with. The articles are indexed in ProQuest, EBSCO, CNPIEC, TDOne, and many other databases. The collection of articles Environmental and Climate Technologies published by RTU Press is indexed in the SCOPUS database.
+              description: Элемент 4
+      feedback:
+        description: Секция "Обратная связь"
+        form:
+          header:
+            i18n:
+              defaultText: Contact Us # home.form.header
+              description: Заголовок
+          button:
+            i18n:
+              defaultText: Send # home.form.button.text
+              description: Кнопка на форме
+          text:
+            i18n:
+              defaultText: Please do not hesitate to contact us if you require any further information or would like to report an issue # home.form.text
+              description: Текст справа от формы
+          answText:
+            i18n:
+              defaultText: We will reply to your inquiry within one week # home.form.answText
+              description: Текст справа от формы о сроке ответа
+          labels:
+            description: Labels на форме
+            message:
+              i18n:
+                defaultText: Feedback # home.form.input.label.message
+                description: Обратная связь
+            name:
+              i18n:
+                defaultText: Name # home.form.input.label.name
+                description: Имя
+            email:
+              i18n:
+                defaultText: Email # home.form.input.label.email
+                description: Эл. почта
+          successMessage:
+            i18n:
+              defaultText: Your message has been successfully sent # home.form.feedback.success
+              description: сообщение об успешной отправки формы
+      libraryStats:
+        description: Секция "библиотека в цифрах"
+        header:
+          i18n:
+            defaultText: Library in numbers # home.header.libInNumbers
+            description: Заголовок
+        autors:
+          i18n:
+            defaultText: Authors # home.stat.autors
+            description: Подпись Авторы
+        pressPublic:
+          i18n:
+            defaultText: Publications # home.stat.pressPublic
+            description: Подпись Публикаций
+        manuscript:
+          i18n:
+            defaultText: Manuscript # home.stat.manuscript
+            description: Подпись Манускриптов
+        thesis:
+          i18n:
+            defaultText: Doctoral Thesis # home.stat.thesis
+            description: Подпись Тезисов
+      partners:
+        description: Секция "Партнёры"
+        header:
+          i18n:
+            defaultText: Partners # home.header.partners
+            description: Заголовок
+        items:
+          item1:
+            name:
+              i18n:
+                defaultText: Партнер 1 # name field in partners.json
+                description: Название партнера 1
+            settings:
+              imageUrl: /img/partners/partner-1.jpg
+              link: http://www.aeup.eu/
+          item2:
+            name:
+              i18n:
+                defaultText: Партнер 2 # name field in partners.json
+                description: Название партнера 2
+            settings:
+              imageUrl: /img/partners/partner-2.jpg
+              link: https://www.crossref.org/
+          item3:
+            name:
+              i18n:
+                defaultText: Партнер 3 # name field in partners.json
+                description: Название партнера 3
+            settings:
+              imageUrl: /img/partners/partner-3.jpg
+              link: http://www.degruyteropen.com/
+      slider:
+        description: Слайдер на главной странице
+        items:
+          item1:
+            header:
+              i18n:
+                defaultText: Sneakers
+                description: Заголовок слайда
+              settings:
+                isVisible: true # в некоторых случаях могут не отображаться header и text
+            text:
+              i18n:
+                defaultText: IGNITE LIMITLESS
+                description: Текст слайда
+              settings:
+                isVisible: true # в некоторых случаях могут не отображаться header и text
+            price:
+              i18n:
+                defaultText: 399.00 $
+                description: Цена товара
+              settings:
+                isVisible: true # в некоторых случаях может не отображаться цена
+            tag:
+              i18n:
+                defaultText: new
+                description: Таг товара
+              settings:
+                isVisible: true # в некоторых случаях может не отображаться tag
+            image:
+              settings:
+                link: https://pumaimages.azureedge.net/images/fn/%7Eregional%7EPNA%7Eothers%7EKOP%7EHome%7E17AW_BTL_ECOM_SP_XO_Homepage-Hero_1440x500_2-LEFT-SOLD-OUT.jpg/fmt/jpg?w=1440
+          item2:
+            header:
+              i18n:
+                defaultText: Sneakers
+                description: Заголовок слайда
+              settings:
+                isVisible: true # в некоторых случаях могут не отображаться header и text
+            text:
+              i18n:
+                defaultText: Limitless Lo EvoKNIT Men’s Running Shoes
+                description: Текст слайда
+              settings:
+                isVisible: true # в некоторых случаях могут не отображаться header и text
+            price:
+              i18n:
+                defaultText: 399.00 $
+                description: Цена товара
+              settings:
+                isVisible: true # в некоторых случаях может не отображаться цена
+            tag:
+              i18n:
+                defaultText: new
+                description: Таг товара
+              settings:
+                isVisible: true # в некоторых случаях может не отображаться tag
+            image:
+              settings:
+                link: https://pumaimages.azureedge.net/images/fn/%7Eregional%7EPNA%7Eothers%7EKOP%7EMens%7E17AW_BTL_ECOM_SP_XO_Category-Hero_1440x500_2-EDIT.jpg/fmt/jpg?w=1440
+          item3:
+            header:
+              i18n:
+                defaultText: Sneakers
+                description: Заголовок слайда
+              settings:
+                isVisible: true # в некоторых случаях могут не отображаться header и text
+            text:
+              i18n:
+                defaultText: Blaze EvoKNIT Training Shoes
+                description: Текст слайда
+              settings:
+                isVisible: true # в некоторых случаях могут не отображаться header и text
+            price:
+              i18n:
+                defaultText: 399.00 $
+                description: Цена товара
+              settings:
+                isVisible: true # в некоторых случаях может не отображаться цена
+            tag:
+              i18n:
+                defaultText: new
+                description: Таг товара
+              settings:
+                isVisible: true # в некоторых случаях может не отображаться tag
+            image:
+              settings:
+                link: https://pumaimages.azureedge.net/images/fn/%7Eregional%7EPNA%7Eothers%7EKOP%7EHome%7E17AW_BTL_ECOM_SP_XO_Homepage-Hero_1440x500_2-LEFT-SOLD-OUT.jpg/fmt/jpg?w=1440
+      topMenu:
+        description: Ссылки вверху главной страницы
+        links:
+          newAdd:
+            i18n:
+              defaultText: New Additions # home.menu.link.newAdd
+              description: Ссылка на слайдер
+          about:
+            i18n:
+              defaultText: About us # home.menu.link.about
+              description: Ссылка на секцию "о нас"
+          partners:
+            i18n:
+              defaultText: Partners # home.menu.link.partners
+              description: Ссылка на секцию "партнёры"
+          contact:
+            i18n:
+              defaultText: Contact us # home.menu.link.contact
+              description: Ссылка на секцию "контакты"
+      textBlock:
+        description: Текстовые блоки для главной страницы
+        title:
+            i18n:
+              defaultText: Title
+              description: Основной заголовок
+        subtitle:
+            i18n:
+              defaultText: Subtitle
+              description: Второстепенный заголовок
+        text:
+            i18n:
+              defaultText: Meet the Suede. It's been kicking around for a long time. From '60s basketball warm-up shoe to '90s hip-hop kick, it's been worn by greats across generations and made its mark on a range of different scenes. All smooth suede, streetwise swagger, and sport-inspired style, it remains to this day PUMA's most epic sneaker icon. This edition has been given a winterized revamp with acrylic wool.
+              description: Текст для страницы
+      popularBlock:
+        description: Текстовые блоки для популярных товаров
+        title:
+          i18n:
+            defaultText: Popular
+            description: Основной заголовок
+        viewAll:
+          i18n:
+            defaultText: View all
+            description: Текст ссылки на все товары
+    login:
+      description: Страница входа / регистрации
+      form:
+        buttons:
+          signIn:
+            i18n:
+              defaultText: Sign in # login.form.submit.signIn
+              description: Кнопка авторизации
+          registration:
+            i18n:
+              defaultText: Registration # registration.btn
+              description: Кнопка регистрации
+            settings:
+              isVisible: false
+        labels:
+          description: Labels в форме авторизации/регистрации
+          password:
+            i18n:
+              defaultText: Password # login.form.input.label.password
+              description: Пароль
+          username:
+            i18n:
+              defaultText: Username # login.form.input.label.username
+              description: Имя пользователя
+    notFound:
+      description: Страница не найдена
+      title:
+        i18n:
+          defaultText: Page not found # notFound.title
+          description: Заголовок
+      text:
+        i18n:
+          defaultText: We can't find the page you're looking for. # notFound.text
+          description: Основной текст на странице
+      return:
+        i18n:
+          defaultText: Return to # notFound.return
+          description: Ссылка возврата
+      link:
+       i18n:
+         defaultText: homepage # notFound.return.link
+         description: Ссылка возврата
+    productCard:
+      description: Страница карточки товара
+      button:
+        i18n:
+          defaultText: Add to Cart # productCard.button.addToCard
+          description: Buy it now for
+      bundlesTitle:
+        i18n:
+          defaultText: Content # productCard.bundles.title
+          description: Заголовок для бандлов
+      outOfStock:
+        i18n:
+          defaultText: Sorry, this book is out of stock. # productCard.outOfStock.text
+          description: Текст, что товара нет в продаже
+      share:
+        i18n:
+          defaultText: Share # productCard.share.title
+          description: Заголовок для кнопок "поделиться"
+      popup:
+        description: Всплывающее окно после добавления товара в корзину
+        header:
+          i18n:
+            defaultText: Item added to the cart # productCard.addToCartPopup.header
+            description: Заголовок
+        buttons:
+          cart:
+            i18n:
+              defaultText: View cart # productCard.addToCartPopup.btn.cart
+              description: Кнопка просмотра корзины
+          continue:
+            i18n:
+              defaultText: Continue shopping # productCard.addToCartPopup.btn.continue
+              description: Кнопка продолжения покупок
+      labels:
+        description: Заголовки для "статичных" полей товара
+        language:
+          i18n:
+            defaultText: Language # productCard.label.language
+            description: Язык
+        yearOfIssue:
+          i18n:
+            defaultText: Year of issue # productCard.label.yearOfIssue
+            description: Год издания
+        publisher:
+          i18n:
+            defaultText: publisher # productCard.label.publisher
+            description: Издатель
+        documentType:
+          i18n:
+            defaultText: document type # productCard.label.documentType
+            description: Тип книги
+      socialLinks:
+        description: Cоциальные иконки для продукта
+        items:
+          facebook:
+            i18n:
+              defaultText: https://www.facebook.com/internationalrelationsrtu
+              description: Ссылка на facebook
+            settings:
+              isVisible: true
+          twitter:
+            i18n:
+              defaultText: https://twitter.com/RTU_LV
+              description: Ссылка на twitter
+            settings:
+              isVisible: true
+          vkontakte:
+            i18n:
+              defaultText: http://vk.com
+              description: Ссылка на vkontakte
+            settings:
+              isVisible: true
+          instagram:
+            i18n:
+              defaultText: http://instagram.com
+              description: Ссылка на instagram
+            settings:
+              isVisible: true
+      previewImages:
+        description: Просмотр изображения для товара (должно быть активировано что-то одно)
+        cropper:
+          description: Добавляется эффект лупы при наведении на изображение
+          settings:
+            isVisible: true
+        slider:
+          description: При клике на изображение, открывается попап со слайдером с изображениями в увеличеном виде
+          settings:
+            isVisible: false
+    user:
+      description: Страница пользователя
+      account:
+        description: Страница редактирования аккаунта
+        title:
+          i18n:
+            defaultText: Account # account.title
+            description: Заголовок
+        button:
+          i18n:
+            defaultText: Edit # account.button.edit
+            description: Кнопка обновить
+        form:
+          description: Форма редактирование данных пользователя
+          labels:
+            email:
+              i18n:
+                defaultText: Email # account.form.label.email
+                description: Эл. почта
+            name:
+              i18n:
+                defaultText: Name # account.form.label.name
+                description: Имя пользователя
+            surname:
+              i18n:
+                defaultText: Surname # account.form.label.surname
+                description: Фамилия пользователя
+          submit:
+            i18n:
+              defaultText: Save # account.form.submit.save
+              description: Кнопка отправки формы редактирования
+      purchases:
+        description: Страница мои покупки
+        emptyStatus:
+          i18n:
+            defaultText: No purchases
+            description: Сообщение о том, что пока не было покупок
+        count:
+          i18n:
+            defaultText: count # catalog.count
+            description: счётчик моих покупок
+        title:
+          i18n:
+            defaultText: My Purchases # purchases.heading
+            description: Заголовок
+      orders:
+        description: Страница мои заказы
+        emptyStatus:
+          i18n:
+            defaultText: No orders
+            description: Сообщение о том, что пока не было заказов
+        transaction:
+          status:
+            i18n:
+              defaultText: Transaction Status # orders.transaction.status
+              description: Статус оплаты
+          details:
+            i18n:
+              defaultText: Transaction Details # orders.transaction.details
+              description: Детали оплаты
+        button:
+          i18n:
+            defaultText: Pay # orders.button.pay
+            description: Кнопка "оплатить"
+        status:
+          i18n:
+            defaultText: Status # orders.status
+            description: Статус заказа
+        count:
+          i18n:
+            defaultText: Status # catalog.count
+            description: Количество товара
+        title:
+         i18n:
+           defaultText: My Orders # orders.heading
+           description: Заголовок
+        paymentSuccess:
+          i18n:
+            defaultText:  Спасибо! Информация о доступе к книге была отправлена на ваш адрес электронной почты. # orders.payment.success.text
+            description: Сообщения об успешной оплате
+        paymentWarning:
+          i18n:
+            defaultText: Wait for the previous payment to be completed
+            description: Сообщения об ожидании предыдущей оплаты
+        labels:
+          description: Текстовые метки на странице
+          date:
+            i18n:
+              defaultText: Date # orders.label.date
+              description: Дата заказа
+          totalCount:
+            i18n:
+              defaultText: Total count # orders.label.totalCount
+              description: Итоговое количество
+          totalPrice:
+            i18n:
+              defaultText: Total price # orders.label.totalPrice
+              description: Итоговая стоимость
+      orderDetails:
+        description: Детали заказа
+        labels:
+          count:
+            i18n:
+              defaultText: Count # orderDetails.label.count
+              description: Количество
+          cost:
+            i18n:
+              defaultText: Cost # orderDetails.label.cost
+              description: Цена
+      
+# группировки
+groupings:
+  categories_menu:
+    description: Список элементов в выпадающем меню в заголовке всех страниц
+    type: categories
+  recommend_items:
+    description: Список рекомендованных товаров
+    type: catalogItems
+  popular_items:
+    description: Список популярных товаров
+    type: catalogItems
+
+# поля для поиска
+# orderingByIdForSearch:
+#   - name
+#   - extra_fields__author
+
+# фильтры
+filters:
+  price:
+    description: фильтр по цене
+    widget_name: RangeSlider
+    filter_type: range
+    value_type: decimal
+    label: Prices
+  categories:
+    description: фильтр по категории
+    widget_name: List
+    filter_type: in
+    value_type: integer
+    label: Categories
+  in_stock:
+    description: фильтр по наличию
+    widget_name: BoolNull
+    filter_type: eq
+    value_type: boolean
+    label: In Stock
+  include_subcategories:
+    description: фильтр по включению в поисковую выдачу значения сабкатегорий
+    widget_name: Switch
+    filter_type: eq
+    value_type: boolean
+    label: Include subcategories
+
+# доступные локали для выбора пользователем
+locales: 
+  main_language_code: 'en'
+  language_codes: [ 'en', 'ru', 'pl', 'lv' ]
+
+# sitemap - переменные для того что бы сгенерировать динамически sitemap.xml по запросу поисковика
+sitemap: 
+  description: общие настройки для /sitemap.xml
+  cacheTime: 600000 # 600 sec cache period
+
+# robots - переменные для генерации robots.txt
+robots: 
+  description: общие настройки для /robots.txt
+  value: ['Crawl-delay: 2']
+
+# в переменной routes лежат вложенные роуты
+# type:
+# page - статичная страница
+# empty - когда роут не индексируется и не является отдельной страницей
+# rangePages - статичные страницы
+# rangeCatalogItems - страница каталога
+routes:
+  /:
+    description: Главная страница сайта
+    type: page
+    sitemap:
+      changefreq: monthly
+      priority: 0.5
+    robots:
+      Allow: true
+    meta:
+      isLoadable: false
+      title: Главная
+      description: Главная страница
+      keywords: главная, страница
+  /catalog:
+    description: Страница каталога
+    type: page
+    # sitemap:
+    #   changefreq: hourly
+    #   priority: 0.8
+    # robots:
+    #   Allow: true
+    meta:
+      isLoadable: false
+      title: Каталог
+      description: каталог
+      keywords: каталог
+  /login:
+    description: Страница авторизации
+    type: page
+    robots:
+      Disallow: true
+    meta:
+      isLoadable: false
+      title: Авторизация
+      description: авторизация
+      keywords: авторизация
+  /product/:uid:
+    description: Страница товара
+    type: rangeCatalogItems
+    # sitemap:
+    #   changefreq: daily
+    #   priority: 1.0
+    # robots:
+    #   Allow: true
+    meta:
+      isLoadable: true
+  /cart:
+    description: Страница корзины
+    type: page
+    robots:
+      Disallow: true
+    meta:
+      isLoadable: false
+      title: Корзина
+      description: корзина
+      keywords: корзина
+  /user:
+    description: Страница пользователя
+    type: page
+    robots:
+      Disallow: true
+    meta:
+      isLoadable: false
+      title: Страница пользователя
+      description: Страница пользователя
+      keywords: страница пользователя
+    routes:
+      /user/account:
+        description: Страница Аккаунт
+        type: page
+        robots:
+          Disallow: true
+        meta:
+          isLoadable: false
+          title: Аккаунт
+          description: аккаунт
+          keywords: Аккаунт
+      /user/purchases:
+        description: Страница Мои покупки
+        type: page
+        robots:
+          Disallow: true
+        meta:
+          isLoadable: false
+          title: Мои покупки
+          description: покупки
+          keywords: мои покупки
+      /user/orders:
+        description: Страница Мои заказы
+        type: page
+        robots:
+          Disallow: true
+        meta:
+          isLoadable: false
+          title: Мои заказы
+          description: заказы
+          keywords: мои заказы
+  /pages:
+    description: Статичные страницы сайта
+    type: rangePages
+    routes:
+      /pages/personal_data_protection:
+        description: Страница personal_data_protection
+        type: page
+        sitemap:
+          changefreq: monthly
+          priority: 0.3
+        robots:
+          Allow: true
+        meta:
+          isLoadable: false
+          title: Защита персональных данных
+          description: защита персональных данных
+          keywords: защита, персональных, данных
+      /pages/card_security:
+        description: Страница card_security
+        type: page
+        sitemap:
+          changefreq: monthly
+          priority: 0.3
+        robots:
+          Allow: true
+        meta:
+          isLoadable: false
+          title: Безопасность карт
+          description: Безопасность карт
+          keywords: безопасность, карт
+      /pages/privacy_policy:
+        description: Страница privacy_policy
+        type: page
+        sitemap:
+          changefreq: monthly
+          priority: 0.3
+        robots:
+          Allow: true
+        meta:
+          isLoadable: false
+          title: Политика конфиденциальности
+          description: политика конфиденциальности
+          keywords: политика, конфиденциальность
+      /pages/terms_of_use:
+        description: Страница terms_of_use
+        type: page
+        sitemap:
+          changefreq: monthly
+          priority: 0.3
+        robots:
+          Allow: true
+        meta:
+          isLoadable: false
+          title: Правила пользования
+          description: Правила пользования
+          keywords: правила

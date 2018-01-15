@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`render() correct with initialState 1`] = `
+<div
+  className="root"
+>
+  <Switch
+    checked={false}
+    onChange={[Function]}
+    prefixCls="ant-switch"
+  />
+</div>
+`;
+
+exports[`render() correct with value=true 1`] = `
+<div
+  className="root"
+>
+  <Switch
+    checked={true}
+    onChange={[Function]}
+    prefixCls="ant-switch"
+  />
+</div>
+`;

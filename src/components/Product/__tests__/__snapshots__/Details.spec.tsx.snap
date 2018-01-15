@@ -1,0 +1,776 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`change active tab 1`] = `
+<div
+  className="jsx-392034345 root"
+>
+  <JSXStyle
+    css=".root.jsx-392034345 .ant-tabs-bar{text-transform:uppercase;}.root.jsx-392034345 .ant-tabs-tabpane{padding-left:26px;padding-right:26px;}.root.jsx-392034345 .ant-table{font-size:14px;}.root.jsx-392034345 .ant-table-tbody > tr > td{padding-top:17px;padding-bottom:17px;}.root.jsx-392034345 .ant-table td:first-of-type{color:#b2bdcb;}.root.jsx-392034345 .ant-table tr:hover > td{background:transparent;}li.jsx-392034345{padding-top:17px;padding-bottom:17px;}.root.jsx-392034345 .bundle,.root.jsx-392034345 .modification,.root.jsx-392034345 .category{font-size:14px;}.root.jsx-392034345 .modification .currency{font-size:inherit;color:inherit;}"
+    styleId="392034345"
+  />
+  <Tabs
+    activeKey="specifications"
+    hideAdd={false}
+    onChange={[Function]}
+    prefixCls="ant-tabs"
+  >
+    <TabPane
+      key="specifications"
+      placeholder={null}
+      tab="Specifications"
+    >
+      <Table
+        bordered={false}
+        className=""
+        columns={
+          Array [
+            Object {
+              "dataIndex": "label",
+            },
+            Object {
+              "dataIndex": "value",
+            },
+          ]
+        }
+        dataSource={
+          Array [
+            Object {
+              "key": "shop_url",
+              "label": "Current Shop URL",
+              "value": "template-basic.agg.loc",
+            },
+            Object {
+              "key": "author",
+              "label": "Автор",
+              "value": "Robert A. Heinlein",
+            },
+            Object {
+              "key": "isbn",
+              "label": "ISBN",
+              "value": "978-0441783588",
+            },
+            Object {
+              "key": "ebook_type",
+              "label": "Тип eBook",
+              "value": "PDF",
+            },
+          ]
+        }
+        indentSize={20}
+        loading={false}
+        locale={Object {}}
+        pagination={false}
+        prefixCls="ant-table"
+        rowKey="key"
+        rowSelection={null}
+        showHeader={false}
+        size="large"
+        useFixedHeader={false}
+      />
+    </TabPane>
+    <TabPane
+      key="modifications"
+      placeholder={null}
+      tab="Modifications"
+    >
+      <ul
+        className="jsx-392034345"
+      >
+        <li
+          className="jsx-392034345"
+          key="58738032e7e0461ca6bb"
+        >
+          <Link
+            className="modification"
+            replace={false}
+            title="ePub version of Starship Troopers ru"
+            to="/product/58738032e7e0461ca6bb"
+          >
+            Starship Troopers. ePub ru
+             - 
+            <Connect(Price)
+              currency="€"
+              price={12}
+            />
+          </Link>
+        </li>
+        <li
+          className="jsx-392034345"
+          key="c1b2170baf484f548362"
+        >
+          <Link
+            className="modification"
+            replace={false}
+            title="Kindle version of Starship Troopers ru"
+            to="/product/c1b2170baf484f548362"
+          >
+            Starship Troopers. Kindle ru
+             - 
+            <Connect(Price)
+              currency="€"
+              price={9}
+            />
+          </Link>
+        </li>
+        <li
+          className="jsx-392034345"
+          key="5a8343812fd1403aa95f"
+        >
+          <Link
+            className="modification"
+            replace={false}
+            title="ePub version of Starship Troopers"
+            to="/product/5a8343812fd1403aa95f"
+          >
+            Starship Troopers. ePub. Free!
+             - 
+            <Connect(Price)
+              currency="€"
+              price={0}
+            />
+          </Link>
+        </li>
+        <li
+          className="jsx-392034345"
+          key="717b27127f7449dd9631"
+        >
+          <Link
+            className="modification"
+            replace={false}
+            title="PDF version of Starship Troopers"
+            to="/product/717b27127f7449dd9631"
+          >
+            Starship Troopers. PDF. Free!
+             - 
+            <Connect(Price)
+              currency="€"
+              price={0}
+            />
+          </Link>
+        </li>
+        <li
+          className="jsx-392034345"
+          key="73f09f43bfde4b669c96"
+        >
+          <Link
+            className="modification"
+            replace={false}
+            title="Kindle version of Starship Troopers"
+            to="/product/73f09f43bfde4b669c96"
+          >
+            Starship Troopers. Kindle. Free!
+             - 
+            <Connect(Price)
+              currency="€"
+              price={0}
+            />
+          </Link>
+        </li>
+      </ul>
+    </TabPane>
+    <TabPane
+      key="categories"
+      placeholder={null}
+      tab="Categories"
+    >
+      <ul
+        className="jsx-392034345"
+      >
+        <li
+          className="jsx-392034345"
+          key="7911d4c525c74c889309"
+        >
+          <Link
+            className="category"
+            replace={false}
+            to="/catalog/7911d4c525c74c889309"
+          >
+            books
+          </Link>
+        </li>
+        <li
+          className="jsx-392034345"
+          key="da26e5a32a12405a9a54"
+        >
+          <Link
+            className="category"
+            replace={false}
+            to="/catalog/da26e5a32a12405a9a54"
+          >
+            eBooks
+          </Link>
+        </li>
+        <li
+          className="jsx-392034345"
+          key="c55784279bc64422aeaf"
+        >
+          <Link
+            className="category"
+            replace={false}
+            to="/catalog/c55784279bc64422aeaf"
+          >
+            PDF
+          </Link>
+        </li>
+        <li
+          className="jsx-392034345"
+          key="13be1baa4e084ebfa207"
+        >
+          <Link
+            className="category"
+            replace={false}
+            to="/catalog/13be1baa4e084ebfa207"
+          >
+            Speculative fiction
+          </Link>
+        </li>
+        <li
+          className="jsx-392034345"
+          key="00643bfe21a148b485ca"
+        >
+          <Link
+            className="category"
+            replace={false}
+            to="/catalog/00643bfe21a148b485ca"
+          >
+            Science fiction
+          </Link>
+        </li>
+      </ul>
+    </TabPane>
+  </Tabs>
+</div>
+`;
+
+exports[`change active tab 2`] = `
+<div
+  className="jsx-392034345 root"
+>
+  <JSXStyle
+    css=".root.jsx-392034345 .ant-tabs-bar{text-transform:uppercase;}.root.jsx-392034345 .ant-tabs-tabpane{padding-left:26px;padding-right:26px;}.root.jsx-392034345 .ant-table{font-size:14px;}.root.jsx-392034345 .ant-table-tbody > tr > td{padding-top:17px;padding-bottom:17px;}.root.jsx-392034345 .ant-table td:first-of-type{color:#b2bdcb;}.root.jsx-392034345 .ant-table tr:hover > td{background:transparent;}li.jsx-392034345{padding-top:17px;padding-bottom:17px;}.root.jsx-392034345 .bundle,.root.jsx-392034345 .modification,.root.jsx-392034345 .category{font-size:14px;}.root.jsx-392034345 .modification .currency{font-size:inherit;color:inherit;}"
+    styleId="392034345"
+  />
+  <Tabs
+    activeKey="modifications"
+    hideAdd={false}
+    onChange={[Function]}
+    prefixCls="ant-tabs"
+  >
+    <TabPane
+      key="specifications"
+      placeholder={null}
+      tab="Specifications"
+    >
+      <Table
+        bordered={false}
+        className=""
+        columns={
+          Array [
+            Object {
+              "dataIndex": "label",
+            },
+            Object {
+              "dataIndex": "value",
+            },
+          ]
+        }
+        dataSource={
+          Array [
+            Object {
+              "key": "shop_url",
+              "label": "Current Shop URL",
+              "value": "template-basic.agg.loc",
+            },
+            Object {
+              "key": "author",
+              "label": "Автор",
+              "value": "Robert A. Heinlein",
+            },
+            Object {
+              "key": "isbn",
+              "label": "ISBN",
+              "value": "978-0441783588",
+            },
+            Object {
+              "key": "ebook_type",
+              "label": "Тип eBook",
+              "value": "PDF",
+            },
+          ]
+        }
+        indentSize={20}
+        loading={false}
+        locale={Object {}}
+        pagination={false}
+        prefixCls="ant-table"
+        rowKey="key"
+        rowSelection={null}
+        showHeader={false}
+        size="large"
+        useFixedHeader={false}
+      />
+    </TabPane>
+    <TabPane
+      key="modifications"
+      placeholder={null}
+      tab="Modifications"
+    >
+      <ul
+        className="jsx-392034345"
+      >
+        <li
+          className="jsx-392034345"
+          key="58738032e7e0461ca6bb"
+        >
+          <Link
+            className="modification"
+            replace={false}
+            title="ePub version of Starship Troopers ru"
+            to="/product/58738032e7e0461ca6bb"
+          >
+            Starship Troopers. ePub ru
+             - 
+            <Connect(Price)
+              currency="€"
+              price={12}
+            />
+          </Link>
+        </li>
+        <li
+          className="jsx-392034345"
+          key="c1b2170baf484f548362"
+        >
+          <Link
+            className="modification"
+            replace={false}
+            title="Kindle version of Starship Troopers ru"
+            to="/product/c1b2170baf484f548362"
+          >
+            Starship Troopers. Kindle ru
+             - 
+            <Connect(Price)
+              currency="€"
+              price={9}
+            />
+          </Link>
+        </li>
+        <li
+          className="jsx-392034345"
+          key="5a8343812fd1403aa95f"
+        >
+          <Link
+            className="modification"
+            replace={false}
+            title="ePub version of Starship Troopers"
+            to="/product/5a8343812fd1403aa95f"
+          >
+            Starship Troopers. ePub. Free!
+             - 
+            <Connect(Price)
+              currency="€"
+              price={0}
+            />
+          </Link>
+        </li>
+        <li
+          className="jsx-392034345"
+          key="717b27127f7449dd9631"
+        >
+          <Link
+            className="modification"
+            replace={false}
+            title="PDF version of Starship Troopers"
+            to="/product/717b27127f7449dd9631"
+          >
+            Starship Troopers. PDF. Free!
+             - 
+            <Connect(Price)
+              currency="€"
+              price={0}
+            />
+          </Link>
+        </li>
+        <li
+          className="jsx-392034345"
+          key="73f09f43bfde4b669c96"
+        >
+          <Link
+            className="modification"
+            replace={false}
+            title="Kindle version of Starship Troopers"
+            to="/product/73f09f43bfde4b669c96"
+          >
+            Starship Troopers. Kindle. Free!
+             - 
+            <Connect(Price)
+              currency="€"
+              price={0}
+            />
+          </Link>
+        </li>
+      </ul>
+    </TabPane>
+    <TabPane
+      key="categories"
+      placeholder={null}
+      tab="Categories"
+    >
+      <ul
+        className="jsx-392034345"
+      >
+        <li
+          className="jsx-392034345"
+          key="7911d4c525c74c889309"
+        >
+          <Link
+            className="category"
+            replace={false}
+            to="/catalog/7911d4c525c74c889309"
+          >
+            books
+          </Link>
+        </li>
+        <li
+          className="jsx-392034345"
+          key="da26e5a32a12405a9a54"
+        >
+          <Link
+            className="category"
+            replace={false}
+            to="/catalog/da26e5a32a12405a9a54"
+          >
+            eBooks
+          </Link>
+        </li>
+        <li
+          className="jsx-392034345"
+          key="c55784279bc64422aeaf"
+        >
+          <Link
+            className="category"
+            replace={false}
+            to="/catalog/c55784279bc64422aeaf"
+          >
+            PDF
+          </Link>
+        </li>
+        <li
+          className="jsx-392034345"
+          key="13be1baa4e084ebfa207"
+        >
+          <Link
+            className="category"
+            replace={false}
+            to="/catalog/13be1baa4e084ebfa207"
+          >
+            Speculative fiction
+          </Link>
+        </li>
+        <li
+          className="jsx-392034345"
+          key="00643bfe21a148b485ca"
+        >
+          <Link
+            className="category"
+            replace={false}
+            to="/catalog/00643bfe21a148b485ca"
+          >
+            Science fiction
+          </Link>
+        </li>
+      </ul>
+    </TabPane>
+  </Tabs>
+</div>
+`;
+
+exports[`render() with initialState 1`] = `
+<div
+  className="jsx-392034345 root"
+>
+  <JSXStyle
+    css=".root.jsx-392034345 .ant-tabs-bar{text-transform:uppercase;}.root.jsx-392034345 .ant-tabs-tabpane{padding-left:26px;padding-right:26px;}.root.jsx-392034345 .ant-table{font-size:14px;}.root.jsx-392034345 .ant-table-tbody > tr > td{padding-top:17px;padding-bottom:17px;}.root.jsx-392034345 .ant-table td:first-of-type{color:#b2bdcb;}.root.jsx-392034345 .ant-table tr:hover > td{background:transparent;}li.jsx-392034345{padding-top:17px;padding-bottom:17px;}.root.jsx-392034345 .bundle,.root.jsx-392034345 .modification,.root.jsx-392034345 .category{font-size:14px;}.root.jsx-392034345 .modification .currency{font-size:inherit;color:inherit;}"
+    styleId="392034345"
+  />
+  <Tabs
+    activeKey="specifications"
+    hideAdd={false}
+    onChange={[Function]}
+    prefixCls="ant-tabs"
+  >
+    <TabPane
+      key="specifications"
+      placeholder={null}
+      tab="Specifications"
+    >
+      <Table
+        bordered={false}
+        className=""
+        columns={
+          Array [
+            Object {
+              "dataIndex": "label",
+            },
+            Object {
+              "dataIndex": "value",
+            },
+          ]
+        }
+        dataSource={Array []}
+        indentSize={20}
+        loading={false}
+        locale={Object {}}
+        pagination={false}
+        prefixCls="ant-table"
+        rowKey="key"
+        rowSelection={null}
+        showHeader={false}
+        size="large"
+        useFixedHeader={false}
+      />
+    </TabPane>
+  </Tabs>
+</div>
+`;
+
+exports[`render() with product 1`] = `
+<div
+  className="jsx-392034345 root"
+>
+  <JSXStyle
+    css=".root.jsx-392034345 .ant-tabs-bar{text-transform:uppercase;}.root.jsx-392034345 .ant-tabs-tabpane{padding-left:26px;padding-right:26px;}.root.jsx-392034345 .ant-table{font-size:14px;}.root.jsx-392034345 .ant-table-tbody > tr > td{padding-top:17px;padding-bottom:17px;}.root.jsx-392034345 .ant-table td:first-of-type{color:#b2bdcb;}.root.jsx-392034345 .ant-table tr:hover > td{background:transparent;}li.jsx-392034345{padding-top:17px;padding-bottom:17px;}.root.jsx-392034345 .bundle,.root.jsx-392034345 .modification,.root.jsx-392034345 .category{font-size:14px;}.root.jsx-392034345 .modification .currency{font-size:inherit;color:inherit;}"
+    styleId="392034345"
+  />
+  <Tabs
+    activeKey="specifications"
+    hideAdd={false}
+    onChange={[Function]}
+    prefixCls="ant-tabs"
+  >
+    <TabPane
+      key="specifications"
+      placeholder={null}
+      tab="Specifications"
+    >
+      <Table
+        bordered={false}
+        className=""
+        columns={
+          Array [
+            Object {
+              "dataIndex": "label",
+            },
+            Object {
+              "dataIndex": "value",
+            },
+          ]
+        }
+        dataSource={
+          Array [
+            Object {
+              "key": "shop_url",
+              "label": "Current Shop URL",
+              "value": "template-basic.agg.loc",
+            },
+            Object {
+              "key": "author",
+              "label": "Автор",
+              "value": "Robert A. Heinlein",
+            },
+            Object {
+              "key": "isbn",
+              "label": "ISBN",
+              "value": "978-0441783588",
+            },
+            Object {
+              "key": "ebook_type",
+              "label": "Тип eBook",
+              "value": "PDF",
+            },
+          ]
+        }
+        indentSize={20}
+        loading={false}
+        locale={Object {}}
+        pagination={false}
+        prefixCls="ant-table"
+        rowKey="key"
+        rowSelection={null}
+        showHeader={false}
+        size="large"
+        useFixedHeader={false}
+      />
+    </TabPane>
+    <TabPane
+      key="modifications"
+      placeholder={null}
+      tab="Modifications"
+    >
+      <ul
+        className="jsx-392034345"
+      >
+        <li
+          className="jsx-392034345"
+          key="58738032e7e0461ca6bb"
+        >
+          <Link
+            className="modification"
+            replace={false}
+            title="ePub version of Starship Troopers ru"
+            to="/product/58738032e7e0461ca6bb"
+          >
+            Starship Troopers. ePub ru
+             - 
+            <Connect(Price)
+              currency="€"
+              price={12}
+            />
+          </Link>
+        </li>
+        <li
+          className="jsx-392034345"
+          key="c1b2170baf484f548362"
+        >
+          <Link
+            className="modification"
+            replace={false}
+            title="Kindle version of Starship Troopers ru"
+            to="/product/c1b2170baf484f548362"
+          >
+            Starship Troopers. Kindle ru
+             - 
+            <Connect(Price)
+              currency="€"
+              price={9}
+            />
+          </Link>
+        </li>
+        <li
+          className="jsx-392034345"
+          key="5a8343812fd1403aa95f"
+        >
+          <Link
+            className="modification"
+            replace={false}
+            title="ePub version of Starship Troopers"
+            to="/product/5a8343812fd1403aa95f"
+          >
+            Starship Troopers. ePub. Free!
+             - 
+            <Connect(Price)
+              currency="€"
+              price={0}
+            />
+          </Link>
+        </li>
+        <li
+          className="jsx-392034345"
+          key="717b27127f7449dd9631"
+        >
+          <Link
+            className="modification"
+            replace={false}
+            title="PDF version of Starship Troopers"
+            to="/product/717b27127f7449dd9631"
+          >
+            Starship Troopers. PDF. Free!
+             - 
+            <Connect(Price)
+              currency="€"
+              price={0}
+            />
+          </Link>
+        </li>
+        <li
+          className="jsx-392034345"
+          key="73f09f43bfde4b669c96"
+        >
+          <Link
+            className="modification"
+            replace={false}
+            title="Kindle version of Starship Troopers"
+            to="/product/73f09f43bfde4b669c96"
+          >
+            Starship Troopers. Kindle. Free!
+             - 
+            <Connect(Price)
+              currency="€"
+              price={0}
+            />
+          </Link>
+        </li>
+      </ul>
+    </TabPane>
+    <TabPane
+      key="categories"
+      placeholder={null}
+      tab="Categories"
+    >
+      <ul
+        className="jsx-392034345"
+      >
+        <li
+          className="jsx-392034345"
+          key="7911d4c525c74c889309"
+        >
+          <Link
+            className="category"
+            replace={false}
+            to="/catalog/7911d4c525c74c889309"
+          >
+            books
+          </Link>
+        </li>
+        <li
+          className="jsx-392034345"
+          key="da26e5a32a12405a9a54"
+        >
+          <Link
+            className="category"
+            replace={false}
+            to="/catalog/da26e5a32a12405a9a54"
+          >
+            eBooks
+          </Link>
+        </li>
+        <li
+          className="jsx-392034345"
+          key="c55784279bc64422aeaf"
+        >
+          <Link
+            className="category"
+            replace={false}
+            to="/catalog/c55784279bc64422aeaf"
+          >
+            PDF
+          </Link>
+        </li>
+        <li
+          className="jsx-392034345"
+          key="13be1baa4e084ebfa207"
+        >
+          <Link
+            className="category"
+            replace={false}
+            to="/catalog/13be1baa4e084ebfa207"
+          >
+            Speculative fiction
+          </Link>
+        </li>
+        <li
+          className="jsx-392034345"
+          key="00643bfe21a148b485ca"
+        >
+          <Link
+            className="category"
+            replace={false}
+            to="/catalog/00643bfe21a148b485ca"
+          >
+            Science fiction
+          </Link>
+        </li>
+      </ul>
+    </TabPane>
+  </Tabs>
+</div>
+`;

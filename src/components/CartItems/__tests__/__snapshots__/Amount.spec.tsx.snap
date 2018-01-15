@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`render() with mayChangeAmountItems as false 1`] = `
+<div
+  className="jsx-1853710974 root"
+>
+  <JSXStyle
+    css=".root.jsx-1853710974{display:inline-block;vertical-align:top;}.root.jsx-1853710974 .ant-input-number{border:0;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;background:transparent;color:#062f49;}.root.jsx-1853710974 .ant-input-number:hover{border-color:transparent;}.root.jsx-1853710974 .ant-input-number-focused{box-shadow:none;border-color:transparent;}.root.jsx-1853710974 .ant-input-number-handler-wrap{border:0;opacity:1;width:100%;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:row-reverse;-ms-flex-direction:row-reverse;flex-direction:row-reverse;background:transparent;}.root.jsx-1853710974 .ant-input-number-input-wrap{position:relative;z-index:3;width:32px;height:32px;}.root.jsx-1853710974 .ant-input-number-handler{width:50%;height:100%;border:0;top:0;bottom:0;background:transparent;}.root.jsx-1853710974 .ant-input-number-handler:hover{height:100% !important;}.root.jsx-1853710974 .ant-input-number-handler-down-inner{right:auto;left:4px;}.root.jsx-1853710974 .ant-input-number-input{background-color:#e5ecf4;border-radius:8px;color:inherit;text-align:right;font-weight:bold;}"
+    styleId="1853710974"
+  />
+  123
+</div>
+`;
+
+exports[`render() with mayChangeAmountItems as true 1`] = `
+<div
+  className="jsx-1853710974 root"
+>
+  <JSXStyle
+    css=".root.jsx-1853710974{display:inline-block;vertical-align:top;}.root.jsx-1853710974 .ant-input-number{border:0;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;background:transparent;color:#062f49;}.root.jsx-1853710974 .ant-input-number:hover{border-color:transparent;}.root.jsx-1853710974 .ant-input-number-focused{box-shadow:none;border-color:transparent;}.root.jsx-1853710974 .ant-input-number-handler-wrap{border:0;opacity:1;width:100%;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:row-reverse;-ms-flex-direction:row-reverse;flex-direction:row-reverse;background:transparent;}.root.jsx-1853710974 .ant-input-number-input-wrap{position:relative;z-index:3;width:32px;height:32px;}.root.jsx-1853710974 .ant-input-number-handler{width:50%;height:100%;border:0;top:0;bottom:0;background:transparent;}.root.jsx-1853710974 .ant-input-number-handler:hover{height:100% !important;}.root.jsx-1853710974 .ant-input-number-handler-down-inner{right:auto;left:4px;}.root.jsx-1853710974 .ant-input-number-input{background-color:#e5ecf4;border-radius:8px;color:inherit;text-align:right;font-weight:bold;}"
+    styleId="1853710974"
+  />
+  <Spin
+    prefixCls="ant-spin"
+    size="default"
+    spinning={false}
+    wrapperClassName=""
+  >
+    <InputNumber
+      min={1}
+      onChange={[Function]}
+      prefixCls="ant-input-number"
+      step={1}
+      value={123}
+    />
+  </Spin>
+</div>
+`;

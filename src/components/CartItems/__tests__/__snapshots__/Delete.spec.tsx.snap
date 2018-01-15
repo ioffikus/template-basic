@@ -1,0 +1,39 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`render() with mayDeleteItems as false 1`] = `
+<div
+  className="jsx-645318627 root"
+>
+  <JSXStyle
+    css=".root.jsx-645318627{text-align:right;}.root.jsx-645318627 .button-delete{background:transparent;color:#b2bdcb;}.root.jsx-645318627 .icon-svg-trash{height:15px;width:14px;}"
+    styleId="645318627"
+  />
+  <span
+    className="jsx-645318627"
+  />
+</div>
+`;
+
+exports[`render() with mayDeleteItems as true 1`] = `
+<div
+  className="jsx-645318627 root"
+>
+  <JSXStyle
+    css=".root.jsx-645318627{text-align:right;}.root.jsx-645318627 .button-delete{background:transparent;color:#b2bdcb;}.root.jsx-645318627 .icon-svg-trash{height:15px;width:14px;}"
+    styleId="645318627"
+  />
+  <Button
+    className="button-delete"
+    ghost={false}
+    loading={false}
+    onClick={[Function]}
+    prefixCls="ant-btn"
+    shape="circle"
+  >
+    <Svg
+      className="icon-svg-trash"
+      name="trash"
+    />
+  </Button>
+</div>
+`;

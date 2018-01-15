@@ -1,0 +1,105 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`render() correct with details and empty status 1`] = `
+<div
+  className="jsx-1430030103 root"
+>
+  <JSXStyle
+    css=".root.jsx-1430030103{font-size:10px;font-weight:500;}.name.jsx-1430030103{margin-right:10px;color:#b2bdcb;font-size:9px;}"
+    styleId="1430030103"
+  />
+  <div
+    className="jsx-1430030103"
+  >
+    <span
+      className="jsx-1430030103 name"
+    >
+      Transaction Details
+       : 
+    </span>
+    <span
+      className="jsx-1430030103"
+    >
+      dymmy details
+    </span>
+  </div>
+</div>
+`;
+
+exports[`render() correct with empty status and details 1`] = `
+<div
+  className="jsx-1430030103 root"
+>
+  <JSXStyle
+    css=".root.jsx-1430030103{font-size:10px;font-weight:500;}.name.jsx-1430030103{margin-right:10px;color:#b2bdcb;font-size:9px;}"
+    styleId="1430030103"
+  />
+</div>
+`;
+
+exports[`render() correct with status and details 1`] = `
+<div
+  className="jsx-1430030103 root"
+>
+  <JSXStyle
+    css=".root.jsx-1430030103{font-size:10px;font-weight:500;}.name.jsx-1430030103{margin-right:10px;color:#b2bdcb;font-size:9px;}"
+    styleId="1430030103"
+  />
+  <div
+    className="jsx-1430030103"
+  >
+    <span
+      className="jsx-1430030103 name"
+    >
+      Transaction Status
+       : 
+    </span>
+    <span
+      className="jsx-1430030103"
+    >
+      dymmy status
+    </span>
+  </div>
+  <div
+    className="jsx-1430030103"
+  >
+    <span
+      className="jsx-1430030103 name"
+    >
+      Transaction Details
+       : 
+    </span>
+    <span
+      className="jsx-1430030103"
+    >
+      dymmy details
+    </span>
+  </div>
+</div>
+`;
+
+exports[`render() correct with status and empty details 1`] = `
+<div
+  className="jsx-1430030103 root"
+>
+  <JSXStyle
+    css=".root.jsx-1430030103{font-size:10px;font-weight:500;}.name.jsx-1430030103{margin-right:10px;color:#b2bdcb;font-size:9px;}"
+    styleId="1430030103"
+  />
+  <div
+    className="jsx-1430030103"
+  >
+    <span
+      className="jsx-1430030103 name"
+    >
+      Transaction Status
+       : 
+    </span>
+    <span
+      className="jsx-1430030103"
+    >
+      dymmy status
+    </span>
+  </div>
+</div>
+`;

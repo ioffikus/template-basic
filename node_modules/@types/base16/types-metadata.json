@@ -1,0 +1,23 @@
+{
+    "authors": "Alec Hill <https://github.com/alechill>",
+    "definitionFilename": "index.d.ts",
+    "libraryDependencies": [],
+    "moduleDependencies": [],
+    "libraryMajorVersion": "1",
+    "libraryMinorVersion": "0",
+    "libraryName": "base16-js 1.0.0",
+    "typingsPackageName": "base16",
+    "projectName": "https://github.com/gaearon/base16-js",
+    "sourceRepoURL": "https://www.github.com/DefinitelyTyped/DefinitelyTyped",
+    "sourceBranch": "types-2.0",
+    "kind": "ProperModule",
+    "globals": [],
+    "declaredModules": [
+        "base16"
+    ],
+    "files": [
+        "index.d.ts"
+    ],
+    "hasPackageJson": false,
+    "contentHash": "7c21a226e0513cef40a296547a49c5fbbcbba439c1e0b23674edcd2b9fdf6125"
+}

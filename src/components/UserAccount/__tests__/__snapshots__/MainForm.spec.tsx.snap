@@ -1,0 +1,601 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`form edit mode 1`] = `
+<div
+  className="jsx-2166235342 root"
+>
+  <JSXStyle
+    css=".root.jsx-2166235342 .ant-form-item-label{text-align:left;font-size:11px;text-transform:uppercase;}.root.jsx-2166235342 label{color:#a7b4c3;}.root.jsx-2166235342 .ant-form-item-required:before,.root.jsx-2166235342 .ant-input,.edit-mode.jsx-2166235342 .ant-form-text:not(.text-email){display:none;}.edit-mode.jsx-2166235342 .ant-input{display:block;}.button-wrapper.jsx-2166235342{text-align:right;}.root.jsx-2166235342 .button-save{display:block;width:100%;}"
+    styleId="2166235342"
+  />
+  <Row
+    align="middle"
+    className="item"
+    gutter={16}
+    type="flex"
+  >
+    <Col
+      span={11}
+    >
+      <Spin
+        prefixCls="ant-spin"
+        size="default"
+        spinning={false}
+        wrapperClassName=""
+      >
+        <Form
+          hideRequiredMark={false}
+          layout="horizontal"
+          onSubmit={[Function]}
+          prefixCls="ant-form"
+        >
+          <div
+            className="jsx-2166235342 button-wrapper"
+          >
+            <Button
+              ghost={false}
+              icon="edit"
+              loading={false}
+              onClick={[Function]}
+              prefixCls="ant-btn"
+              type="primary"
+            >
+              Edit
+            </Button>
+          </div>
+          <FormItem
+            colon={false}
+            hasFeedback={false}
+            label="Email"
+            labelCol={
+              Object {
+                "span": 7,
+              }
+            }
+            prefixCls="ant-form"
+            wrapperCol={
+              Object {
+                "span": 17,
+              }
+            }
+          >
+            <span
+              className="jsx-2166235342 ant-form-text text-email"
+            >
+              test@test.com
+            </span>
+          </FormItem>
+          <FormItem
+            colon={false}
+            hasFeedback={false}
+            label="Name"
+            labelCol={
+              Object {
+                "span": 7,
+              }
+            }
+            prefixCls="ant-form"
+            wrapperCol={
+              Object {
+                "span": 17,
+              }
+            }
+          >
+            <Input
+              data-__meta={
+                Object {
+                  "initialValue": "Ivan",
+                  "leadingName": "firstName",
+                  "name": "firstName",
+                  "originalProps": Object {
+                    "disabled": false,
+                    "prefixCls": "ant-input",
+                    "type": "text",
+                  },
+                  "ref": null,
+                  "rules": Array [
+                    Object {
+                      "message": "Please fill this field",
+                      "required": true,
+                    },
+                  ],
+                  "trigger": "onChange",
+                  "validate": Array [
+                    Object {
+                      "rules": Array [
+                        Object {
+                          "message": "Please fill this field",
+                          "required": true,
+                        },
+                      ],
+                      "trigger": Array [
+                        "onChange",
+                      ],
+                    },
+                  ],
+                  "valuePropName": "value",
+                }
+              }
+              disabled={false}
+              id="firstName"
+              onChange={[Function]}
+              prefixCls="ant-input"
+              type="text"
+              value="Ivan"
+            />
+            <span
+              className="jsx-2166235342 ant-form-text"
+            >
+              Ivan
+            </span>
+          </FormItem>
+          <FormItem
+            colon={false}
+            hasFeedback={false}
+            label="Surname"
+            labelCol={
+              Object {
+                "span": 7,
+              }
+            }
+            prefixCls="ant-form"
+            wrapperCol={
+              Object {
+                "span": 17,
+              }
+            }
+          >
+            <Input
+              data-__meta={
+                Object {
+                  "initialValue": "Ivanov",
+                  "leadingName": "lastName",
+                  "name": "lastName",
+                  "originalProps": Object {
+                    "disabled": false,
+                    "prefixCls": "ant-input",
+                    "type": "text",
+                  },
+                  "ref": null,
+                  "rules": Array [
+                    Object {
+                      "message": "Please fill this field",
+                      "required": true,
+                    },
+                  ],
+                  "trigger": "onChange",
+                  "validate": Array [
+                    Object {
+                      "rules": Array [
+                        Object {
+                          "message": "Please fill this field",
+                          "required": true,
+                        },
+                      ],
+                      "trigger": Array [
+                        "onChange",
+                      ],
+                    },
+                  ],
+                  "valuePropName": "value",
+                }
+              }
+              disabled={false}
+              id="lastName"
+              onChange={[Function]}
+              prefixCls="ant-input"
+              type="text"
+              value="Ivanov"
+            />
+            <span
+              className="jsx-2166235342 ant-form-text"
+            >
+              Ivanov
+            </span>
+          </FormItem>
+        </Form>
+      </Spin>
+    </Col>
+  </Row>
+</div>
+`;
+
+exports[`render spin while requesting 1`] = `
+<div
+  className="jsx-2166235342 root"
+>
+  <JSXStyle
+    css=".root.jsx-2166235342 .ant-form-item-label{text-align:left;font-size:11px;text-transform:uppercase;}.root.jsx-2166235342 label{color:#a7b4c3;}.root.jsx-2166235342 .ant-form-item-required:before,.root.jsx-2166235342 .ant-input,.edit-mode.jsx-2166235342 .ant-form-text:not(.text-email){display:none;}.edit-mode.jsx-2166235342 .ant-input{display:block;}.button-wrapper.jsx-2166235342{text-align:right;}.root.jsx-2166235342 .button-save{display:block;width:100%;}"
+    styleId="2166235342"
+  />
+  <Row
+    align="middle"
+    className="item"
+    gutter={16}
+    type="flex"
+  >
+    <Col
+      span={11}
+    >
+      <Spin
+        prefixCls="ant-spin"
+        size="default"
+        spinning={true}
+        wrapperClassName=""
+      >
+        <Form
+          hideRequiredMark={false}
+          layout="horizontal"
+          onSubmit={[Function]}
+          prefixCls="ant-form"
+        >
+          <div
+            className="jsx-2166235342 button-wrapper"
+          >
+            <Button
+              ghost={false}
+              icon="edit"
+              loading={false}
+              onClick={[Function]}
+              prefixCls="ant-btn"
+              type="primary"
+            >
+              Edit
+            </Button>
+          </div>
+          <FormItem
+            colon={false}
+            hasFeedback={false}
+            label="Email"
+            labelCol={
+              Object {
+                "span": 7,
+              }
+            }
+            prefixCls="ant-form"
+            wrapperCol={
+              Object {
+                "span": 17,
+              }
+            }
+          >
+            <span
+              className="jsx-2166235342 ant-form-text text-email"
+            >
+              test@test.com
+            </span>
+          </FormItem>
+          <FormItem
+            colon={false}
+            hasFeedback={false}
+            label="Name"
+            labelCol={
+              Object {
+                "span": 7,
+              }
+            }
+            prefixCls="ant-form"
+            wrapperCol={
+              Object {
+                "span": 17,
+              }
+            }
+          >
+            <Input
+              data-__meta={
+                Object {
+                  "initialValue": "Ivan",
+                  "leadingName": "firstName",
+                  "name": "firstName",
+                  "originalProps": Object {
+                    "disabled": false,
+                    "prefixCls": "ant-input",
+                    "type": "text",
+                  },
+                  "ref": null,
+                  "rules": Array [
+                    Object {
+                      "message": "Please fill this field",
+                      "required": true,
+                    },
+                  ],
+                  "trigger": "onChange",
+                  "validate": Array [
+                    Object {
+                      "rules": Array [
+                        Object {
+                          "message": "Please fill this field",
+                          "required": true,
+                        },
+                      ],
+                      "trigger": Array [
+                        "onChange",
+                      ],
+                    },
+                  ],
+                  "valuePropName": "value",
+                }
+              }
+              disabled={false}
+              id="firstName"
+              onChange={[Function]}
+              prefixCls="ant-input"
+              type="text"
+              value="Ivan"
+            />
+            <span
+              className="jsx-2166235342 ant-form-text"
+            >
+              Ivan
+            </span>
+          </FormItem>
+          <FormItem
+            colon={false}
+            hasFeedback={false}
+            label="Surname"
+            labelCol={
+              Object {
+                "span": 7,
+              }
+            }
+            prefixCls="ant-form"
+            wrapperCol={
+              Object {
+                "span": 17,
+              }
+            }
+          >
+            <Input
+              data-__meta={
+                Object {
+                  "initialValue": "Ivanov",
+                  "leadingName": "lastName",
+                  "name": "lastName",
+                  "originalProps": Object {
+                    "disabled": false,
+                    "prefixCls": "ant-input",
+                    "type": "text",
+                  },
+                  "ref": null,
+                  "rules": Array [
+                    Object {
+                      "message": "Please fill this field",
+                      "required": true,
+                    },
+                  ],
+                  "trigger": "onChange",
+                  "validate": Array [
+                    Object {
+                      "rules": Array [
+                        Object {
+                          "message": "Please fill this field",
+                          "required": true,
+                        },
+                      ],
+                      "trigger": Array [
+                        "onChange",
+                      ],
+                    },
+                  ],
+                  "valuePropName": "value",
+                }
+              }
+              disabled={false}
+              id="lastName"
+              onChange={[Function]}
+              prefixCls="ant-input"
+              type="text"
+              value="Ivanov"
+            />
+            <span
+              className="jsx-2166235342 ant-form-text"
+            >
+              Ivanov
+            </span>
+          </FormItem>
+        </Form>
+      </Spin>
+    </Col>
+  </Row>
+</div>
+`;
+
+exports[`render() correctly 1`] = `
+<div
+  className="jsx-2166235342 root"
+>
+  <JSXStyle
+    css=".root.jsx-2166235342 .ant-form-item-label{text-align:left;font-size:11px;text-transform:uppercase;}.root.jsx-2166235342 label{color:#a7b4c3;}.root.jsx-2166235342 .ant-form-item-required:before,.root.jsx-2166235342 .ant-input,.edit-mode.jsx-2166235342 .ant-form-text:not(.text-email){display:none;}.edit-mode.jsx-2166235342 .ant-input{display:block;}.button-wrapper.jsx-2166235342{text-align:right;}.root.jsx-2166235342 .button-save{display:block;width:100%;}"
+    styleId="2166235342"
+  />
+  <Row
+    align="middle"
+    className="item"
+    gutter={16}
+    type="flex"
+  >
+    <Col
+      span={11}
+    >
+      <Spin
+        prefixCls="ant-spin"
+        size="default"
+        spinning={false}
+        wrapperClassName=""
+      >
+        <Form
+          hideRequiredMark={false}
+          layout="horizontal"
+          onSubmit={[Function]}
+          prefixCls="ant-form"
+        >
+          <div
+            className="jsx-2166235342 button-wrapper"
+          >
+            <Button
+              ghost={false}
+              icon="edit"
+              loading={false}
+              onClick={[Function]}
+              prefixCls="ant-btn"
+              type="primary"
+            >
+              Edit
+            </Button>
+          </div>
+          <FormItem
+            colon={false}
+            hasFeedback={false}
+            label="Email"
+            labelCol={
+              Object {
+                "span": 7,
+              }
+            }
+            prefixCls="ant-form"
+            wrapperCol={
+              Object {
+                "span": 17,
+              }
+            }
+          >
+            <span
+              className="jsx-2166235342 ant-form-text text-email"
+            >
+              test@test.com
+            </span>
+          </FormItem>
+          <FormItem
+            colon={false}
+            hasFeedback={false}
+            label="Name"
+            labelCol={
+              Object {
+                "span": 7,
+              }
+            }
+            prefixCls="ant-form"
+            wrapperCol={
+              Object {
+                "span": 17,
+              }
+            }
+          >
+            <Input
+              data-__meta={
+                Object {
+                  "initialValue": "Ivan",
+                  "leadingName": "firstName",
+                  "name": "firstName",
+                  "originalProps": Object {
+                    "disabled": false,
+                    "prefixCls": "ant-input",
+                    "type": "text",
+                  },
+                  "ref": null,
+                  "rules": Array [
+                    Object {
+                      "message": "Please fill this field",
+                      "required": true,
+                    },
+                  ],
+                  "trigger": "onChange",
+                  "validate": Array [
+                    Object {
+                      "rules": Array [
+                        Object {
+                          "message": "Please fill this field",
+                          "required": true,
+                        },
+                      ],
+                      "trigger": Array [
+                        "onChange",
+                      ],
+                    },
+                  ],
+                  "valuePropName": "value",
+                }
+              }
+              disabled={false}
+              id="firstName"
+              onChange={[Function]}
+              prefixCls="ant-input"
+              type="text"
+              value="Ivan"
+            />
+            <span
+              className="jsx-2166235342 ant-form-text"
+            >
+              Ivan
+            </span>
+          </FormItem>
+          <FormItem
+            colon={false}
+            hasFeedback={false}
+            label="Surname"
+            labelCol={
+              Object {
+                "span": 7,
+              }
+            }
+            prefixCls="ant-form"
+            wrapperCol={
+              Object {
+                "span": 17,
+              }
+            }
+          >
+            <Input
+              data-__meta={
+                Object {
+                  "initialValue": "Ivanov",
+                  "leadingName": "lastName",
+                  "name": "lastName",
+                  "originalProps": Object {
+                    "disabled": false,
+                    "prefixCls": "ant-input",
+                    "type": "text",
+                  },
+                  "ref": null,
+                  "rules": Array [
+                    Object {
+                      "message": "Please fill this field",
+                      "required": true,
+                    },
+                  ],
+                  "trigger": "onChange",
+                  "validate": Array [
+                    Object {
+                      "rules": Array [
+                        Object {
+                          "message": "Please fill this field",
+                          "required": true,
+                        },
+                      ],
+                      "trigger": Array [
+                        "onChange",
+                      ],
+                    },
+                  ],
+                  "valuePropName": "value",
+                }
+              }
+              disabled={false}
+              id="lastName"
+              onChange={[Function]}
+              prefixCls="ant-input"
+              type="text"
+              value="Ivanov"
+            />
+            <span
+              className="jsx-2166235342 ant-form-text"
+            >
+              Ivanov
+            </span>
+          </FormItem>
+        </Form>
+      </Spin>
+    </Col>
+  </Row>
+</div>
+`;

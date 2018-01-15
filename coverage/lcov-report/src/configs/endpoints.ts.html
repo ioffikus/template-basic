@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for src/configs/endpoints.ts</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../prettify.css" />
+    <link rel="stylesheet" href="../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../index.html">All files</a> / <a href="index.html">src/configs</a> endpoints.ts
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>1/1</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/0</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>0/0</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>1/1</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line high'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">25x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import CommonCfg from 'src/configs/common';
+&nbsp;
+const EndpointsConfig = {
+  USER: `${CommonCfg.REACT_API_PATH}/user`,
+  AUTH: {
+    LOGIN: '/login',
+    REFRESH_TOKEN: '/refresh_token',
+    LOGOUT: '/logout',
+    AUTH_LINK: `${CommonCfg.REACT_API_PATH}/auth/oauth/provider-url`,
+    GWT_AGG: '/auth/oauth/jwt/aggregion',
+  },
+  CONFIG: `${CommonCfg.REACT_API_PATH}/config`,
+  CATALOG: `${CommonCfg.REACT_API_PATH}/catalog/`,
+  RECOMMEND_ITEMS: `${CommonCfg.REACT_API_PATH}/catalog/groups/recommend_items`,
+  POPULAR_ITEMS: `${CommonCfg.REACT_API_PATH}/catalog/groups/popular_items`,
+  CATEGORIES: `${CommonCfg.REACT_API_PATH}/catalog/categories/`,
+  CATEGORIES_MENU: `${CommonCfg.REACT_API_PATH}/catalog/groups/categories_menu`,
+  PRODUCT: `${CommonCfg.REACT_API_PATH}/catalog/`,
+  FILTERS: `${CommonCfg.REACT_API_PATH}/catalog/filters/`,
+  CART_CURRENT: `${CommonCfg.REACT_API_PATH}/cart/current`,
+  CART_CURRENT_ITEMS: `${CommonCfg.REACT_API_PATH}/cart/current/items/`,
+  CART_PAID_ITEMS: `${CommonCfg.REACT_API_PATH}/cart/paid/items/`,
+  USER_ORDERS: `${CommonCfg.REACT_API_PATH}/user/orders/`,
+  PAY_ORDER: `${CommonCfg.REACT_API_PATH}/payments/pay/`,
+  PAYMENTS_CHECK: '/payments/check/',
+  MAILING_CONTACT_FORM: `${CommonCfg.REACT_API_PATH}/mailing/contact-form/`,
+  PAGES: `${CommonCfg.REACT_API_PATH}/pages/`,
+  SEO: `${CommonCfg.REACT_API_PATH}/seo/data`,
+};
+&nbsp;
+export default EndpointsConfig;
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Fri Dec 29 2017 11:52:09 GMT+0300 (MSK)
+</div>
+</div>
+<script src="../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../sorter.js"></script>
+</body>
+</html>

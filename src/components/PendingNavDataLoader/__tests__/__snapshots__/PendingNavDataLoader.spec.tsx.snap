@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`render() 1`] = `
+<Route
+  location={
+    Object {
+      "hash": "",
+      "key": "dummy",
+      "pathname": "/",
+      "search": "",
+      "state": Object {},
+    }
+  }
+  render={[Function]}
+/>
+`;

@@ -1,0 +1,165 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`render() correctly 1`] = `
+<div
+  className="jsx-3150404229 root app-container"
+>
+  <JSXStyle
+    css=".root.jsx-3150404229 .item{-webkit-flex:1;-ms-flex:1;flex:1;}"
+    styleId="3150404229"
+  />
+  <Row
+    gutter={0}
+    type="flex"
+  >
+    <Col
+      className="item"
+      key="about"
+    >
+      <Item
+        links={
+          Object {
+            "/link1": Object {
+              "text": Object {
+                "i18n": Object {
+                  "defaultText": "Our store",
+                  "description": "Текст ссылки на страницу Our store",
+                },
+              },
+              "title": Object {
+                "i18n": Object {
+                  "defaultText": "Our store",
+                  "description": "Подсказка ссылки на страницу Our store",
+                },
+              },
+            },
+            "/link2": Object {
+              "text": Object {
+                "i18n": Object {
+                  "defaultText": "About company",
+                  "description": "Текст ссылки на страницу About company",
+                },
+              },
+              "title": Object {
+                "i18n": Object {
+                  "defaultText": "About company",
+                  "description": "Подсказка ссылки на страницу About company",
+                },
+              },
+            },
+            "/link3": Object {
+              "text": Object {
+                "i18n": Object {
+                  "defaultText": "Terms & conditions",
+                  "description": "Текст ссылки на страницу Terms & conditions",
+                },
+              },
+              "title": Object {
+                "i18n": Object {
+                  "defaultText": "Terms & conditions",
+                  "description": "Подсказка ссылки на страницу Terms & conditions",
+                },
+              },
+            },
+          }
+        }
+        title="About"
+      />
+    </Col>
+    <Col
+      className="item"
+      key="support"
+    >
+      <Item
+        links={
+          Object {
+            "/link1": Object {
+              "text": Object {
+                "i18n": Object {
+                  "defaultText": "FAQ",
+                  "description": "Текст ссылки на страницу FAQ",
+                },
+              },
+              "title": Object {
+                "i18n": Object {
+                  "defaultText": "FAQ",
+                  "description": "Подсказка ссылки на страницу FAQ",
+                },
+              },
+            },
+            "/link2": Object {
+              "text": Object {
+                "i18n": Object {
+                  "defaultText": "Support team",
+                  "description": "Текст ссылки на страницу Support team",
+                },
+              },
+              "title": Object {
+                "i18n": Object {
+                  "defaultText": "Support team",
+                  "description": "Подсказка ссылки на страницу Support team",
+                },
+              },
+            },
+            "/link3": Object {
+              "text": Object {
+                "i18n": Object {
+                  "defaultText": "Feedback",
+                  "description": "Текст ссылки на страницу Feedback",
+                },
+              },
+              "title": Object {
+                "i18n": Object {
+                  "defaultText": "Feedback",
+                  "description": "Подсказка ссылки на страницу Feedback",
+                },
+              },
+            },
+          }
+        }
+        title="Support"
+      />
+    </Col>
+    <Col
+      className="item"
+      key="payment"
+    >
+      <Item
+        links={
+          Object {
+            "/link1": Object {
+              "text": Object {
+                "i18n": Object {
+                  "defaultText": "Payment methods",
+                  "description": "Текст ссылки на страницу Payment methods",
+                },
+              },
+              "title": Object {
+                "i18n": Object {
+                  "defaultText": "Payment methods",
+                  "description": "Подсказка ссылки на страницу Payment methods",
+                },
+              },
+            },
+            "/link2": Object {
+              "text": Object {
+                "i18n": Object {
+                  "defaultText": "Free delivery",
+                  "description": "Текст ссылки на страницу Free delivery",
+                },
+              },
+              "title": Object {
+                "i18n": Object {
+                  "defaultText": "Free delivery",
+                  "description": "Подсказка ссылки на страницу Free delivery",
+                },
+              },
+            },
+          }
+        }
+        title="Payment and delivery"
+      />
+    </Col>
+  </Row>
+</div>
+`;

@@ -1,0 +1,4 @@
+{
+  "extends": "./tsconfig.json",
+  "exclude": ["node_modules", "docker", "dist", "webpack", "logs", "coverage", "bin", "src/**/__mocks__/*.snap"]
+}

@@ -1,0 +1,124 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`render() correct 1`] = `
+<div
+  className="jsx-801695999 root app-main-menu"
+>
+  <JSXStyle
+    css=".root.jsx-801695999{padding-left:16px;}.root.jsx-801695999 .footer{position:fixed;bottom:20px;left:0;width:260px;color:#b2bdcb;font-size:6px;text-align:center;white-space:nowrap;overflow:hidden;-webkit-transition:0.2s;transition:0.2s;}"
+    styleId="801695999"
+  />
+  <Menu
+    className=""
+    inlineCollapsed={false}
+    inlineIndent={16}
+    mode="inline"
+    onDeselect={[Function]}
+    onOpenChange={[Function]}
+    onSelect={[Function]}
+    openKeys={
+      Array [
+        "35",
+      ]
+    }
+    prefixCls="ant-menu"
+    selectedKeys={
+      Array [
+        "37",
+      ]
+    }
+    theme="light"
+  >
+    <MenuItem
+      key="23"
+    >
+      <Link
+        replace={false}
+        to={
+          Object {
+            "pathname": "/catalog",
+            "search": "filter=%7B%22categories__in%22%3A%5B23%5D%7D",
+          }
+        }
+      >
+        Adventure novel
+      </Link>
+    </MenuItem>
+    <SubMenu
+      key="35"
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
+      onTitleClick={[Function]}
+      onTitleMouseEnter={[Function]}
+      onTitleMouseLeave={[Function]}
+      title="books"
+    >
+      <MenuItem
+        key="37"
+      >
+        <Link
+          replace={false}
+          to={
+            Object {
+              "pathname": "/catalog",
+              "search": "filter=%7B%22categories__in%22%3A%5B37%5D%7D",
+            }
+          }
+        >
+          eBooks
+        </Link>
+      </MenuItem>
+      <MenuItem
+        key="36"
+      >
+        <Link
+          replace={false}
+          to={
+            Object {
+              "pathname": "/catalog",
+              "search": "filter=%7B%22categories__in%22%3A%5B36%5D%7D",
+            }
+          }
+        >
+          Paperback
+        </Link>
+      </MenuItem>
+    </SubMenu>
+    <MenuItem
+      key="24"
+    >
+      <Link
+        replace={false}
+        to={
+          Object {
+            "pathname": "/catalog",
+            "search": "filter=%7B%22categories__in%22%3A%5B24%5D%7D",
+          }
+        }
+      >
+        Brit lit
+      </Link>
+    </MenuItem>
+    <MenuItem
+      key="26"
+    >
+      <Link
+        replace={false}
+        to={
+          Object {
+            "pathname": "/catalog",
+            "search": "filter=%7B%22categories__in%22%3A%5B26%5D%7D",
+          }
+        }
+      >
+        Literary fiction
+      </Link>
+    </MenuItem>
+  </Menu>
+  <div
+    className="jsx-801695999 footer"
+  >
+    Alicanto E-commerce Systems
+  </div>
+</div>
+`;

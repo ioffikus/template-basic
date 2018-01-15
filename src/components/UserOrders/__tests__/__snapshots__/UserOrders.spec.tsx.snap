@@ -1,0 +1,254 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`render() with props.items 1`] = `
+<div
+  className="jsx-1430125611 root"
+>
+  <JSXStyle
+    css=".root.jsx-1430125611{font-size:14px;font-weight:bold;padding-bottom:15px;}.root.jsx-1430125611 .ant-table-thead > tr > th{color:#062f49;font-weight:500;text-transform:uppercase;background:transparent;}.root.jsx-1430125611 .main-table{background:#fff;margin-bottom:16px;}.footer.jsx-1430125611{text-align:center;}.root.jsx-1430125611 .status-popover{max-width:400px;}.root.jsx-1430125611 .status-popover .ant-popover-arrow{display:block;}"
+    styleId="1430125611"
+  />
+  <Table
+    bordered={false}
+    className="main-table"
+    columns={
+      Array [
+        Object {
+          "key": "status",
+          "render": [Function],
+          "title": "status",
+        },
+        Object {
+          "dataIndex": "date",
+          "title": "date",
+        },
+        Object {
+          "dataIndex": "itemsCount",
+          "title": "items",
+        },
+        Object {
+          "key": "total",
+          "render": [Function],
+          "title": "total",
+        },
+        Object {
+          "key": "actions",
+          "render": [Function],
+          "title": "actions",
+        },
+      ]
+    }
+    dataSource={
+      Array [
+        Object {
+          "cart": Object {
+            "id": 33,
+            "items": Array [
+              Object {
+                "count": 2,
+                "id": 83,
+                "in_stock": true,
+                "is_deleted": false,
+                "modified": "2017-12-15T11:23:43.370090Z",
+                "schema_fields": Object {
+                  "currency": Object {
+                    "label": "Валюта",
+                    "type": "string",
+                    "value": "$",
+                  },
+                  "description": Object {
+                    "label": "Описание",
+                    "type": "text",
+                    "value": "The New York Times bestselling series that inspired the international hit video game: The Witcher.
+
+Geralt is a witcher, a man whose magic powers, enhanced by long training and a mysterious elixir, have made him a brilliant fighter and a merciless assassin. Yet he is no ordinary murderer: his targets are the multifarious monsters and vile fiends that ravage the land and attack the innocent. 
+
+This is a collection of short stories, following the adventures of the hit collection THE LAST WISH. Join Geralt as he battles monsters, demons and prejudices alike...
+
+Witcher collections
+The Last Wish
+Sword of Destiny
+
+Witcher novels
+Blood of Elves 
+The Time of Contempt
+Baptism of Fire
+The Tower of Swallows
+Lady of the Lake
+
+The Malady and Other Stories: An Andrzej Sapkowski Sampler (e-only)
+
+
+Translated from original Polish by David French",
+                  },
+                  "name": Object {
+                    "label": "Имя",
+                    "type": "string",
+                    "value": "Sword of Destiny (The Witcher)",
+                  },
+                  "picture_url": Object {
+                    "label": "Картинка",
+                    "type": "string",
+                    "value": "http://localhost:8000/media/item_pictures/2017-12-14T140837.2674370000dc74b408d40b4b7783ee3232c6554960.jpg",
+                  },
+                  "price": Object {
+                    "label": "Цена",
+                    "type": "decimal",
+                    "value": 0.01,
+                  },
+                  "short_description": Object {
+                    "label": "Краткое описание",
+                    "type": "text",
+                    "value": "The New York Times bestselling series that inspired the international hit video game: The Witcher.
+
+",
+                  },
+                },
+                "uid": "3cf12d0021c3438c9d43",
+              },
+            ],
+            "items_count": 2,
+            "modified": "2017-12-15T11:23:29.178841Z",
+            "total": 0.02,
+          },
+          "currency": "$",
+          "date": "Dec 15, 2017 2:23 PM",
+          "id": 26,
+          "isPaid": false,
+          "itemsCount": 2,
+          "key": 26,
+          "status": "подтвержден",
+          "total": 0.02,
+          "transactionDetails": "",
+          "transactionStatus": "",
+        },
+        Object {
+          "cart": Object {
+            "id": 32,
+            "items": Array [
+              Object {
+                "count": 1,
+                "id": 82,
+                "in_stock": true,
+                "is_deleted": false,
+                "modified": "2017-12-15T11:23:21.985610Z",
+                "schema_fields": Object {
+                  "currency": Object {
+                    "label": "Валюта",
+                    "type": "string",
+                    "value": "€",
+                  },
+                  "description": Object {
+                    "label": "Описание",
+                    "type": "text",
+                    "value": "The New York Times bestselling series that inspired the international hit video game: The Witcher.
+
+For over a century, humans, dwarves, gnomes, and elves have lived together in relative peace. But times have changed, the uneasy peace is over, and now the races are fighting once again. The only good elf, it seems, is a dead elf.
+
+Geralt of Rivia, the cunning assassin known as The Witcher, has been waiting for the birth of a prophesied child. This child has the power to change the world - for good, or for evil.
+
+As the threat of war hangs over the land and the child is hunted for her extraordinary powers, it will become Geralt's responsibility to protect them all - and the Witcher never accepts defeat.
+
+Blood of Elves is the first full-length Witcher novel, and the perfect follow up if you've read The Last Wish collection.
+
+
+Witcher novels
+Blood of Elves 
+The Time of Contempt
+Baptism of Fire
+The Tower of Swallows
+Lady of the Lake
+
+Witcher collections
+The Last Wish
+Sword of Destiny
+
+The Malady and Other Stories: An Andrzej Sapkowski Sampler (e-only)
+
+
+Translated from original Polish by Danusia Stok",
+                  },
+                  "name": Object {
+                    "label": "Имя",
+                    "type": "string",
+                    "value": "Blood of Elves (The Witcher)",
+                  },
+                  "picture_url": Object {
+                    "label": "Картинка",
+                    "type": "string",
+                    "value": "http://localhost:8000/media/item_pictures/2017-12-14T140838.10681000001414d5bc0446468394bf70a70a0ed503.jpg",
+                  },
+                  "price": Object {
+                    "label": "Цена",
+                    "type": "decimal",
+                    "value": 0,
+                  },
+                  "short_description": Object {
+                    "label": "Краткое описание",
+                    "type": "text",
+                    "value": "The New York Times bestselling series that inspired the international hit video game: The Witcher.
+
+",
+                  },
+                },
+                "uid": "5929a9e26a654ff785f5",
+              },
+            ],
+            "items_count": 1,
+            "modified": "2017-12-15T10:13:36.737706Z",
+            "total": 0,
+          },
+          "currency": "€",
+          "date": "Dec 15, 2017 1:13 PM",
+          "id": 25,
+          "isPaid": true,
+          "itemsCount": 1,
+          "key": 25,
+          "status": "оплачен",
+          "total": 0,
+          "transactionDetails": "",
+          "transactionStatus": "",
+        },
+      ]
+    }
+    defaultExpandedRowKeys={
+      Array [
+        26,
+      ]
+    }
+    expandedRowRender={[Function]}
+    indentSize={20}
+    loading={false}
+    locale={Object {}}
+    pagination={false}
+    prefixCls="ant-table"
+    rowKey="key"
+    rowSelection={null}
+    showHeader={true}
+    size="large"
+    useFixedHeader={false}
+  />
+  <div
+    className="jsx-1430125611 footer"
+  />
+</div>
+`;
+
+exports[`render() without props.items 1`] = `
+<div
+  className="jsx-1430125611 root"
+>
+  <JSXStyle
+    css=".root.jsx-1430125611{font-size:14px;font-weight:bold;padding-bottom:15px;}.root.jsx-1430125611 .ant-table-thead > tr > th{color:#062f49;font-weight:500;text-transform:uppercase;background:transparent;}.root.jsx-1430125611 .main-table{background:#fff;margin-bottom:16px;}.footer.jsx-1430125611{text-align:center;}.root.jsx-1430125611 .status-popover{max-width:400px;}.root.jsx-1430125611 .status-popover .ant-popover-arrow{display:block;}"
+    styleId="1430125611"
+  />
+  <div
+    className="jsx-1430125611 app-text-empty text-empty"
+  >
+    No orders
+  </div>
+  <div
+    className="jsx-1430125611 footer"
+  />
+</div>
+`;

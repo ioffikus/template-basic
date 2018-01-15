@@ -1,0 +1,84 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`render() correctly 1`] = `
+<div
+  className="jsx-3266447429 root"
+>
+  <JSXStyle
+    css=".list.jsx-3266447429{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-align-items:flex-end;-webkit-box-align:flex-end;-ms-flex-align:flex-end;align-items:flex-end;-webkit-box-pack:end;-webkit-justify-content:flex-end;-ms-flex-pack:end;justify-content:flex-end;margin:0;padding:0;list-style-type:none;}.root.jsx-3266447429 .link{font-size:0;}.item.jsx-3266447429{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;width:25px;height:25px;}.root.jsx-3266447429 .icon-facebook{fill:#008fff;width:12px;height:17px;}.root.jsx-3266447429 .icon-twitter{fill:#009cff;width:11px;height:17px;}.root.jsx-3266447429 .icon-vkontakte{fill:#4c75a3;width:15px;height:12px;}.root.jsx-3266447429 .icon-instagram{fill:#ff0070;width:14px;height:14px;}"
+    styleId="3266447429"
+  />
+  <ul
+    className="jsx-3266447429 list"
+  >
+    <li
+      className="jsx-3266447429 item"
+      key="facebook"
+    >
+      <a
+        className="jsx-3266447429 link"
+        href="https://www.facebook.com/internationalrelationsrtu"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        <Svg
+          className="icon icon-facebook"
+          name="facebook"
+        />
+        facebook
+      </a>
+    </li>
+    <li
+      className="jsx-3266447429 item"
+      key="twitter"
+    >
+      <a
+        className="jsx-3266447429 link"
+        href="https://twitter.com/RTU_LV"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        <Svg
+          className="icon icon-twitter"
+          name="twitter"
+        />
+        twitter
+      </a>
+    </li>
+    <li
+      className="jsx-3266447429 item"
+      key="vkontakte"
+    >
+      <a
+        className="jsx-3266447429 link"
+        href="http://vk.com"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        <Svg
+          className="icon icon-vkontakte"
+          name="vkontakte"
+        />
+        vkontakte
+      </a>
+    </li>
+    <li
+      className="jsx-3266447429 item"
+      key="instagram"
+    >
+      <a
+        className="jsx-3266447429 link"
+        href="http://instagram.com"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        <Svg
+          className="icon icon-instagram"
+          name="instagram"
+        />
+        instagram
+      </a>
+    </li>
+  </ul>
+</div>
+`;

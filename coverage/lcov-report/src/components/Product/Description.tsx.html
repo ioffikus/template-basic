@@ -1,0 +1,596 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for src/components/Product/Description.tsx</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../prettify.css" />
+    <link rel="stylesheet" href="../../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../../index.html">All files</a> / <a href="index.html">src/components/Product</a> Description.tsx
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">95% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>19/20</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/0</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">85.71% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>6/7</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">94.74% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>18/19</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line high'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import React from 'react';
+import { connect } from 'react-redux';
+import { push } from 'connected-react-router';
+import { Button, Modal } from 'antd';
+import _ from 'lodash';
+import dispatch from 'src/store/dispatch';
+import { IProductState } from 'src/ducks/product';
+import { addToCart } from 'src/ducks/cart';
+import CartItems from 'src/components/CartItems';
+import Price from 'src/components/Price';
+&nbsp;
+interface IOwnProps {}
+&nbsp;
+interface IConnectedState {
+  ui: Alicanto.Models.UI;
+  product: IProductState;
+}
+&nbsp;
+type IProps = IOwnProps &amp; IConnectedState;
+&nbsp;
+interface IState {<span class="fstat-no" title="function not covered" ></span>
+  isVisibleCartM<span class="cstat-no" title="statement not covered" >odal: boolean;</span>
+}
+&nbsp;
+const mapStateToProps = (state: Store.IState, ownProps: IOwnProps) =&gt; ({
+  ui: state.ui,
+  product: state.product,
+});
+&nbsp;
+const WrappedDescription = connect&lt;IConnectedState, undefined, IOwnProps&gt;(mapStateToProps)(
+  class Description extends React.Component&lt;IProps, IState&gt; {
+    state: IState = {
+      isVisibleCartModal: false,
+    };
+&nbsp;
+    handleAddToCart = () =&gt; {
+      dispatch(
+        addToCart(this.props.product, () =&gt; {
+          this.setState({
+            isVisibleCartModal: true,
+          });
+        }),
+      );
+    };
+&nbsp;
+    handleCartModalCancel = () =&gt; {
+      this.setState({
+        isVisibleCartModal: false,
+      });
+    };
+&nbsp;
+    handleGoToCart = () =&gt; {
+      dispatch(push('/cart'));
+    };
+&nbsp;
+    render() {
+      const schemaFields = this.props.product.schema_fields;
+      // const isNewItem = false; // TODO: API &amp; design is not released yet [ch1801]
+      // const isSale = false; // TODO: API &amp; design is not released yet [ch1801]
+      const name = _.get(schemaFields, 'name.value', '');
+      const description = _.get(schemaFields, 'description.value', '');
+      const currency: string = _.get(schemaFields, 'currency.value', '');
+      const price = _.get(schemaFields, 'price.value', 0);
+      // const oldPrice = 0; // TODO: API &amp; design is not released yet [ch1801]
+      // const isShowTags = isNewItem || isSale; [ch1803]
+      const productCardUI = this.props.ui.routes.productCard;
+      const commonUI = this.props.ui.common;
+      return (
+        &lt;div className="root"&gt;
+          &lt;style jsx&gt;{`
+            .root {
+              font-size: 14px;
+            }
+            .name {
+              font-size: 24px;
+              line-height: 1.17;
+              margin-bottom: 15px;
+              color: inherit;
+            }
+            .description {
+              line-height: 1.7;
+            }
+            .root :global(.text + .text) {
+              margin-top: 15px;
+            }
+            .content {
+              margin-bottom: 17px;
+            }
+            .buttons-wrapper {
+              display: flex;
+              justify-content: space-between;
+            }
+            .root :global(.select-size) {
+              // width: 100%;
+              font-size: inherit;
+              color: #a7b4c3;
+              margin-right: 10px;
+            }
+            .root :global(.ant-select-lg .ant-select-selection--single) {
+              height: 40px;
+              background-color: #e5ecf4;
+              border-radius: 8px;
+              border: 0;
+            }
+            .root :global(.ant-select-lg .ant-select-selection__rendered) {
+              line-height: 40px;
+              margin-left: 25px;
+              margin-right: 15px;
+            }
+            .root :global(.button-price) {
+              height: 40px;
+              font-weight: 500;
+              letter-spacing: 2px;
+              border-radius: 8px;
+              padding: 0 35px;
+            }
+            .root :global(.button-price .currency) {
+              color: inherit;
+              font-size: inherit;
+            }
+          `}&lt;/style&gt;
+          &lt;div className="content"&gt;
+            &lt;h1 className="name"&gt;{name}&lt;/h1&gt;
+            &lt;p className="description"&gt;{description}&lt;/p&gt;
+          &lt;/div&gt;
+          &lt;div className="buttons-wrapper"&gt;
+            {/* TODO [ch1167] */}
+            {/* &lt;Select defaultValue="Size" size="large" className="select-size"&gt;
+              &lt;Select.Option value="5.5"&gt;5.5&lt;/Select.Option&gt;
+              &lt;Select.Option value="6"&gt;6&lt;/Select.Option&gt;
+              &lt;Select.Option value="6.5"&gt;6.5&lt;/Select.Option&gt;
+              &lt;Select.Option value="7"&gt;7&lt;/Select.Option&gt;
+              &lt;Select.Option value="7.5"&gt;7.5&lt;/Select.Option&gt;
+              &lt;Select.Option value="8"&gt;8&lt;/Select.Option&gt;
+              &lt;Select.Option value="8.5"&gt;8.5&lt;/Select.Option&gt;
+              &lt;Select.Option value="9"&gt;9&lt;/Select.Option&gt;
+              &lt;Select.Option value="9.5"&gt;9.5&lt;/Select.Option&gt;
+              &lt;Select.Option value="10"&gt;10&lt;/Select.Option&gt;
+              &lt;Select.Option value="10.5"&gt;10.5&lt;/Select.Option&gt;
+              &lt;Select.Option value="11"&gt;11&lt;/Select.Option&gt;
+            &lt;/Select&gt; */}
+            &lt;Button type="primary" size="large" className="button-price" onClick={this.handleAddToCart}&gt;
+              {productCardUI.button.i18n.defaultText} &amp;nbsp;
+              &lt;Price price={price} currency={currency} /&gt;
+            &lt;/Button&gt;
+          &lt;/div&gt;
+          &lt;Modal
+            visible={this.state.isVisibleCartModal}
+            onCancel={this.handleCartModalCancel}
+            footer={false}
+            width={540}
+          &gt;
+            &lt;CartItems
+              mayChangeAmountItems={true}
+              footer={[
+                &lt;Button
+                  key="continueShopping"
+                  className="button"
+                  type="primary"
+                  size="large"
+                  onClick={this.handleCartModalCancel}
+                &gt;
+                  {commonUI.buttons.continueShopping.i18n.defaultText}
+                &lt;/Button&gt;,
+                &lt;Button key="goToCart" className="button" type="primary" size="large" onClick={this.handleGoToCart}&gt;
+                  {commonUI.buttons.goToCart.i18n.defaultText}
+                &lt;/Button&gt;,
+              ]}
+            /&gt;
+          &lt;/Modal&gt;
+        &lt;/div&gt;
+      );
+    }
+  },
+);
+&nbsp;
+export default WrappedDescription;
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Fri Dec 29 2017 11:52:09 GMT+0300 (MSK)
+</div>
+</div>
+<script src="../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../sorter.js"></script>
+</body>
+</html>

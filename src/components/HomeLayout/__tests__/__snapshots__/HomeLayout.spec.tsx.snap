@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`render() 1`] = `
+<Adapter>
+  <SiderMenu
+    type="categories"
+  >
+    <Connect(CategoriesMenu) />
+  </SiderMenu>
+  <Adapter>
+    <Home />
+  </Adapter>
+</Adapter>
+`;

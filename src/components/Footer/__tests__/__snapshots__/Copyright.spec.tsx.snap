@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`render() correctly 1`] = `
+<div
+  className="root"
+>
+  © 2017 
+  PUMA STORE
+</div>
+`;

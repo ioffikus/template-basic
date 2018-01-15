@@ -1,0 +1,53 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`render() correct with initialState 1`] = `
+<div
+  className="root"
+>
+  <RadioGroup
+    disabled={false}
+    onChange={[Function]}
+    size="large"
+    value="null"
+  >
+    <RadioButton
+      prefixCls="ant-radio-button"
+      value="true"
+    >
+      Yes
+    </RadioButton>
+    <RadioButton
+      prefixCls="ant-radio-button"
+      value="false"
+    >
+      No
+    </RadioButton>
+  </RadioGroup>
+</div>
+`;
+
+exports[`render() correct with value=true 1`] = `
+<div
+  className="root"
+>
+  <RadioGroup
+    disabled={false}
+    onChange={[Function]}
+    size="large"
+    value="true"
+  >
+    <RadioButton
+      prefixCls="ant-radio-button"
+      value="true"
+    >
+      Yes
+    </RadioButton>
+    <RadioButton
+      prefixCls="ant-radio-button"
+      value="false"
+    >
+      No
+    </RadioButton>
+  </RadioGroup>
+</div>
+`;

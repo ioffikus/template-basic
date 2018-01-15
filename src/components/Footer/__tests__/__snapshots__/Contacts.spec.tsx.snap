@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`render() correctly 1`] = `
+<div
+  className="jsx-1404201388 root"
+>
+  <JSXStyle
+    css="a.jsx-1404201388{color:inherit;}a.jsx-1404201388:hover{text-decoration:none;}"
+    styleId="1404201388"
+  />
+  2025 Hamilton Avenue, San Jose, California 95125, USA, 
+   
+  <a
+    className="jsx-1404201388"
+    href="tel:+74083767400"
+  >
+    (408) 376-7400
+  </a>
+</div>
+`;

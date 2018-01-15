@@ -1,0 +1,136 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`render() with categories 1`] = `
+<div
+  className="jsx-2632493999 root"
+>
+  <JSXStyle
+    css=".root.jsx-2632493999 .ant-breadcrumb a{color:#b2bdcb;font-size:14px;-webkit-letter-spacing:2px;-moz-letter-spacing:2px;-ms-letter-spacing:2px;letter-spacing:2px;font-weight:bold;}.root.jsx-2632493999 .ant-breadcrumb-separator{margin:0 14px;}.root.jsx-2632493999 .ant-breadcrumb > span:last-child{color:#062f49;font-size:2em;font-weight:bold;}"
+    styleId="2632493999"
+  />
+  <Breadcrumb
+    prefixCls="ant-breadcrumb"
+    separator=" "
+  >
+    <BreadcrumbItem
+      key="35"
+      prefixCls="ant-breadcrumb"
+      separator="/"
+    >
+      <Link
+        replace={false}
+        to={
+          Object {
+            "pathname": "/catalog",
+            "search": "filter=%7B%22categories__in%22%3A%5B35%5D%7D",
+          }
+        }
+      >
+        books
+      </Link>
+    </BreadcrumbItem>
+    <BreadcrumbItem
+      key="37"
+      prefixCls="ant-breadcrumb"
+      separator="/"
+    >
+      eBooks
+    </BreadcrumbItem>
+  </Breadcrumb>
+</div>
+`;
+
+exports[`render() with categories initialiItems  1`] = `""`;
+
+exports[`render() with product initialiItems  1`] = `""`;
+
+exports[`render() with product items  1`] = `
+<div
+  className="jsx-2632493999 root"
+>
+  <JSXStyle
+    css=".root.jsx-2632493999 .ant-breadcrumb a{color:#b2bdcb;font-size:14px;-webkit-letter-spacing:2px;-moz-letter-spacing:2px;-ms-letter-spacing:2px;letter-spacing:2px;font-weight:bold;}.root.jsx-2632493999 .ant-breadcrumb-separator{margin:0 14px;}.root.jsx-2632493999 .ant-breadcrumb > span:last-child{color:#062f49;font-size:2em;font-weight:bold;}"
+    styleId="2632493999"
+  />
+  <Breadcrumb
+    prefixCls="ant-breadcrumb"
+    separator=" "
+  >
+    <BreadcrumbItem
+      key="115"
+      prefixCls="ant-breadcrumb"
+      separator="/"
+    >
+      <Link
+        replace={false}
+        to={
+          Object {
+            "pathname": "/catalog",
+            "search": "filter=%7B%22categories__in%22%3A%5B115%5D%7D",
+          }
+        }
+      >
+        books
+      </Link>
+    </BreadcrumbItem>
+    <BreadcrumbItem
+      key="117"
+      prefixCls="ant-breadcrumb"
+      separator="/"
+    >
+      <Link
+        replace={false}
+        to={
+          Object {
+            "pathname": "/catalog",
+            "search": "filter=%7B%22categories__in%22%3A%5B117%5D%7D",
+          }
+        }
+      >
+        eBooks
+      </Link>
+    </BreadcrumbItem>
+    <BreadcrumbItem
+      key="118"
+      prefixCls="ant-breadcrumb"
+      separator="/"
+    >
+      <Link
+        replace={false}
+        to={
+          Object {
+            "pathname": "/catalog",
+            "search": "filter=%7B%22categories__in%22%3A%5B118%5D%7D",
+          }
+        }
+      >
+        PDF
+      </Link>
+    </BreadcrumbItem>
+    <BreadcrumbItem
+      key="81"
+      prefixCls="ant-breadcrumb"
+      separator="/"
+    >
+      <Link
+        replace={false}
+        to={
+          Object {
+            "pathname": "/catalog",
+            "search": "filter=%7B%22categories__in%22%3A%5B81%5D%7D",
+          }
+        }
+      >
+        Speculative fiction
+      </Link>
+    </BreadcrumbItem>
+    <BreadcrumbItem
+      key="82"
+      prefixCls="ant-breadcrumb"
+      separator="/"
+    >
+      Science fiction
+    </BreadcrumbItem>
+  </Breadcrumb>
+</div>
+`;

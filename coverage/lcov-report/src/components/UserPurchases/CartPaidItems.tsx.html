@@ -1,0 +1,461 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for src/components/UserPurchases/CartPaidItems.tsx</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../prettify.css" />
+    <link rel="stylesheet" href="../../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../../index.html">All files</a> / <a href="index.html">src/components/UserPurchases</a> CartPaidItems.tsx
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>0/23</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/0</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>0/8</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>0/23</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import React from 'react';
+import { Link } from 'react-router-dom';
+import { Table } from 'antd';
+import _ from 'lodash';
+import Price from 'src/components/Price';
+import CartProductImage from 'src/components/CartProductImage';
+&nbsp;
+inte<span class="fstat-no" title="function not covered" >rf</span>ace IRecord {
+  key: n<span class="cstat-no" title="statement not covered" >umber;</span>
+  pictur<span class="cstat-no" title="statement not covered" >eUrl: string;<span class="fstat-no" title="function not covered" ></span></span>
+  name: stri<span class="cstat-no" title="statement not covered" >ng;<span class="fstat-no" title="function not covered" ></span></span>
+  shortDescription: string;<span class="cstat-no" title="statement not covered" ></span>
+  count: number;<span class="cstat-no" title="statement not covered" ></span>
+  currency: string;<span class="cstat-no" title="statement not covered" ></span>
+  price: number;<span class="cstat-no" title="statement not covered" ></span>
+  uid: string;<span class="cstat-no" title="statement not covered" ></span>
+}<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" ></span>
+interface IProps {<span class="cstat-no" title="statement not covered" ></span>
+  ui: Alicanto.Models.UI;<span class="cstat-no" title="statement not covered" ></span>
+  items: Alicant<span class="cstat-no" title="statement not covered" >o.Models.CatalogItem[];</span>
+}
+&nbsp;
+interface IState {}
+&nbsp;
+class CartPaidItems extends React.Component&lt;IProps, IState&gt; {
+  getDataSource = (): IRecord[] =&gt; {
+    return this.props.items.map(item =&gt; {
+      const key = item.id;
+      const uid = item.uid;
+      const count = _.get(item, 'count', 0);
+      const schemaFields = item.schema_fields;
+      const pictureUrl = _.get(schemaFields, 'picture_url.value', '');
+<span class="fstat-no" title="function not covered" ></span>      const name = _.get(schemaFields, 'name.value', '');
+      const shortDescript<span class="cstat-no" title="statement not covered" >ion = _.get(schemaFie</span>lds, 'short_description.value', '');
+      const currency = _<span class="cstat-no" title="statement not covered" >.get(schemaFields, 'currency.value', '');</span>
+      const price = _.get(schemaFields, 'price.value', 0);
+      return {
+        key,
+        pictureUrl,
+        name,<span class="fstat-no" title="function not covered" ></span>
+        shortDescrip<span class="cstat-no" title="statement not covered" >tion,</span>
+        count,
+        price,
+        currency,
+        uid,
+      };
+    });
+  };<span class="fstat-no" title="function not covered" ></span>
+<span class="cstat-no" title="statement not covered" ></span>
+  render() {<span class="cstat-no" title="statement not covered" ></span>
+    const commonUI = this.props.ui.common;
+    const columns = [
+      {
+        title: commonUI.tables.cells.image.i18n.defaultText,
+        key: 'image',
+        className: 'image-col',
+        render: (text: string, record: IRecord) =&gt; {
+          return &lt;CartProductImage pictureUrl={record.pictureUrl} imageAlt={record.name} /&gt;;
+        },
+      },
+      {
+        title: commonUI.<span class="fstat-no" title="function not covered" >ta</span>bles.cells.name.i18n.defaultText,
+        key: 'name',<span class="cstat-no" title="statement not covered" ></span>
+        className: '<span class="cstat-no" title="statement not covered" >name-col',</span>
+        render: (text: string, record: IRecord) =&gt; {
+          const { uid, shortDescription, name } = record;
+          return (
+            &lt;div className="disc"&gt;
+              &lt;Link to={`/product/${uid}`} className="name" title={shortDescription}&gt;
+                {name}
+              &lt;/Link&gt;<span class="fstat-no" title="function not covered" ></span>
+              &lt;div className="code"&gt;# {uid}&lt;/div<span class="cstat-no" title="statement not covered" >&gt;</span>
+            &lt;/div&gt;<span class="cstat-no" title="statement not covered" ></span>
+          );
+        },
+      },
+      {<span class="cstat-no" title="statement not covered" ></span>
+        title: commonUI.tables.cells.count.i18n.defaultText,
+        key: 'count',
+        className: 'count-col',
+        render: (text: string, record: IRecord) =&gt; {
+          const count = record.count;
+          return &lt;div&gt;{count}&lt;/div&gt;;
+        },
+      },
+      {
+        title: commonUI.tables.cells.price.i18n.defaultText,
+        key: 'price',
+        className: 'price-col',
+        render: (text: string, record: IRecord) =&gt; {
+          const { currency, price } = record;
+          return &lt;Price price={price} currency={currency} /&gt;;
+        },
+      },
+    ];
+&nbsp;
+    return (
+      &lt;div className="root"&gt;
+        &lt;style jsx&gt;{`
+          .root :global(.image-col) {
+            width: 66px;
+          }
+          .root :global(.price-col) {
+            text-align: right;
+            padding-right: 20px;
+          }
+          .root :global(.count-col) {
+            padding-right: 20px;
+            text-align: right;
+          }
+          .root :global(.ant-table-thead &gt; tr &gt; th) {
+            color: #062f49;
+            font-weight: 500;
+            text-transform: uppercase;
+            background: transparent;
+            border-bottom: 1px solid #b2bdcb;
+          }
+          .root :global(.name) {
+            color: #062f49;
+          }
+          .root :global(.code) {
+            color: #b2bdcb;
+          }
+        `}&lt;/style&gt;
+        &lt;Table columns={columns} dataSource={this.getDataSource()} pagination={false} /&gt;
+      &lt;/div&gt;
+    );
+  }
+}
+&nbsp;
+export default CartPaidItems;
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Fri Dec 29 2017 11:52:09 GMT+0300 (MSK)
+</div>
+</div>
+<script src="../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../sorter.js"></script>
+</body>
+</html>
